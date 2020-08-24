@@ -98,7 +98,7 @@ def serverXMU02():
 			data2x = string2x.encode()
 
 			sx2.sendall(data2x)
-			time.sleep(2)
+			time.sleep(5)
 
 
 

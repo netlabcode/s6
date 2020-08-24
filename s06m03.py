@@ -17,12 +17,19 @@ url = "opc.tcp://10.1.0.99:8899/freeopcua/server/"
 client = Client(url)
 client.connect()
 print("connected to OPC UA Server")
-val1 = client.get_node("ns=2;i=221")
-val2 = client.get_node("ns=2;i=222")
-val3 = client.get_node("ns=2;i=223")
-val4 = client.get_node("ns=2;i=224")
-val5 = client.get_node("ns=2;i=225")
-val6 = client.get_node("ns=2;i=226")
+val1 = client.get_node("ns=2;i=227")
+val2 = client.get_node("ns=2;i=228")
+val3 = client.get_node("ns=2;i=229")
+val4 = client.get_node("ns=2;i=230")
+val5 = client.get_node("ns=2;i=231")
+val6 = client.get_node("ns=2;i=232")
+val7 = client.get_node("ns=2;i=233")
+val8 = client.get_node("ns=2;i=234")
+val9 = client.get_node("ns=2;i=235")
+val10 = client.get_node("ns=2;i=236")
+val11 = client.get_node("ns=2;i=237")
+val12 = client.get_node("ns=2;i=238")
+val13 = client.get_node("ns=2;i=239")
 
 
 # Define a function for the thread
@@ -46,11 +53,18 @@ def serverOne():
 					value4 = val4.get_value()
 					value5 = val5.get_value()
 					value6 = val6.get_value()
+					value7 = val7.get_value()
+					value8 = val8.get_value()
+					value9 = val9.get_value()
+					value10 = val10.get_value()
+					value11 = val11.get_value()
+					value12 = val12.get_value()
+					value13 = val13.get_value()
 
 					#covert inetger to string
 					#stringd = str(value)
 
-					stringd = str(value1)+"-"+str(value2)+"-"+str(value3)+"-"+str(value4)+"-"+str(value5)+"-"+str(value6)
+					stringd = str(value1)+"-"+str(value2)+"-"+str(value3)+"-"+str(value4)+"-"+str(value5)+"-"+str(value6)+"-"+str(value7)+"-"+str(value8)+"-"+str(value9)+"-"+str(value10)+"-"+str(value11)+"-"+str(value12)+"-"+str(value13)
 
 					#convert string to bytes data
 					data1 = stringd.encode()
@@ -77,12 +91,8 @@ def serverTwo():
 				while b < 6:
 					data2 = conn2.recv(1024)
 					print('Data:',data2)
-					value = value + 30
-					check = 1
-					if check == 1:
-						val1.set_value(value, ua.VariantType.Int16)
-					elif check == 2:
-						val1.set_value(value, ua.VariantType.Int16)
+
+
 
 
 
