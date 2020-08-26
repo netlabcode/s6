@@ -42,4 +42,4 @@ def stacked_bar_chart():
 
 if __name__ == '__main__':
     #init_db()
-    app.run(debug=True)
+    app.run(host="131.180.165.15", port=int("80"), debug=True)
