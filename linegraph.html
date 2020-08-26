@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bar Chart</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+</head>
+<body>
+  <canvas id="myChart" width="600" height="400"></canvas>
+  <canvas id="myChart2" width="600" height="400"></canvas>
+  <script>
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("myChart").getContext("2d");
+    var ctx2 = document.getElementById("myChart2").getContext("2d");
+
+    var weeks = {{xid|safe}};
+    var data1 = {{data1|safe}};
+    var data2 = {{data2|safe}};
+
+    var data = {
+        labels: weeks,
+        datasets: [
+            {
+                label: "First dataset",
+                fillColor: "rgba(220,220,0,0.2)",
+                strokeColor: "rgba(220,220,220,1)",
+                pointColor: "rgba(220,220,220,1)",
+                pointStrokeColor: "#fff",
+                pointHighlightFill: "#fff",
+                pointHighlightStroke: "rgba(220,220,220,1)",
+                data: data1
+            }
+        ]
+    };
+
+    var datax = {
+        labels: weeks,
+        datasets: [
+            {
+                label: "Second dataset",
+                fillColor: "rgba(220,220,220,0.2)",
+                strokeColor: "rgba(220,220,220,1)",
+                pointColor: "rgba(220,220,220,1)",
+                pointStrokeColor: "#fff",
+                pointHighlightFill: "#fff",
+                pointHighlightStroke: "rgba(220,220,220,1)",
+                data: data2
+            }
+        ]
+    };
+
+    var myLineChart = new Chart(ctx).Line(data);
+    var myLineChart2 = new Chart(ctx2).Line(datax);
+  </script>
+</body>
+</html>
