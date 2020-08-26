@@ -1,0 +1,46 @@
+sudssh -X crof11.ewi.tudelft.nl
+sudo fuser -k 6653/tcp
+
+sudo mn -c
+sudo mn --topo single,3
+sudo mn --topo linear,3
+
+Connect to host VM
+sudo ip addr add 10.0.0.99/24 dev vnet
+
+sudo ip addr add 10.0.0.99/24 dev s1
+sudo ip link set s1 up
+
+sudo mn --custom topo.py --topo mytopo
+sudo python toporouter.py 
+
+sudo apt install openvswitch-testcontroller
+sudo cp /usr/bin/ovs-testcontroller /usr/bin/ovs-controller
+
+ps -x | grep python
+ps -x | grep script.py
+kill 3935 (process ID)
+
+python script.py &amp
+&amp
+
+sudo apt install sqlite3
+sudo apt install sqlitebrowser
+
+python script.py &amp
+
+pip3 install -U Flask
+env FLASK_APP=web.py flask run
+
+git config --global user.name "netlabcode"
+git config --global user.email "presekal@ui.ac.id"
+
+echo "# newtest" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/netlabcode/newtest.git
+git remote rm origin
+git push -u origin master
+
+ls -ltr
