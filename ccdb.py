@@ -41,6 +41,8 @@ def serverOne():
 			c = con.cursor()
 			datet = datetime.datetime.now()
 
+			#print(data1new)
+
 
 			if 'mu01' in data1new:
 				try:
@@ -48,6 +50,7 @@ def serverOne():
 					c.execute("INSERT INTO mu01(xtime, B23_Li_23_24_CB_ctrl, B23_Li_23_24_CB_res, B23_Li_23_24_I_res, B23_Li_23_24_P_res, B23_Li_23_24_Q_res, B23_Li_23_24_V_res) VALUES (?,?,?,?,?,?,?)",(datet,int(a),int(b),float(ce),float(d),float(e),float(f)))
 					print(a)
 				except Exception:
+					print("mu1")
 					pass
 			elif 'mu02' in data1new:
 				try:
@@ -55,9 +58,10 @@ def serverOne():
 					c.execute("INSERT INTO mu02(xtime, B23_Li_22_23_CB_ctrl, B23_Li_22_23_CB_res, B23_Li_22_23_I_res, B23_Li_22_23_P_res, B23_Li_22_23_Q_res, B23_Li_22_23_V_res) VALUES (?,?,?,?,?,?,?)",(datet,int(a),int(b),float(ce),float(d),float(e),float(f)))
 					print(a)
 				except Exception:
+					print("mu2")
 					pass
 			else:
-				print('0')
+				print('.')
 
 			con.commit()
 			con.close()

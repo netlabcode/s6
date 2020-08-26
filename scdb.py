@@ -76,54 +76,11 @@ def serverMU02():
 
 
 
-# Define a function for the thread
-def serverXMU01():
-	with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sx1:
-		sx1.connect((MU01, PORT2))
-		ax = 1
-		value1x=0
-		while ax < 6:
-			#covert inetger to string
-			value1x = value1x+5
-			string1x = str(value1x)
-
-			#stringd = str(value1)+"-"+str(value2)+"-"+str(value3)
-
-			#convert string to bytes data
-			data1x = string1x.encode()
-
-			sx1.sendall(data1x)
-			print(data1x)
-			time.sleep(2)
-
-def serverXMU02():
-	with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sx2:
-		sx2.connect((MU02, PORT2))
-		bx = 1
-		value2x=0
-		while bx < 6:
-			#covert inetger to string
-			value2x = value2x+7
-			string2x = str(value2x)
-
-			#stringd = str(value1)+"-"+str(value2)+"-"+str(value3)
-
-			#convert string to bytes data
-			data2x = string2x.encode()
-
-			sx2.sendall(data2x)
-			print(data2x)
-			time.sleep(5)
-
-
-
 
 # Create two threads as follows
 try:
    _thread.start_new_thread( serverMU01, ( ) )
    _thread.start_new_thread( serverMU02, ( ) )
-   #_thread.start_new_thread( serverXMU01, ( ) )
-   #_thread.start_new_thread( serverXMU02, ( ) )
 except:
    print ("Error: unable to start thread")
 

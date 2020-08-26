@@ -11,6 +11,7 @@ HOST = ''
 PORT1 = 991
 PORT2 = 992
 PORT3 = 993
+PORT4 = 994
 
 
 #OPC ACCESS
@@ -140,6 +141,45 @@ def serverTwo():
 				else:
 						print(".")
 
+def serverTwoCC():
+	with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s2:
+		s2.bind(('',PORT4))
+		s2.listen()
+		conn2, addr = s2.accept()
+		valueb=0
+		with conn2:
+			print('Server 2 from:',addr)
+			while True:
+				b = 1
+				value = 2
+
+				data2 = conn2.recv(1024)
+				data3 = data2.decode("utf-8")
+				a,b = data3.split("-")
+
+
+				value = int(b)
+				check = int(a)
+				if check == 215:
+					val1.set_value(value, ua.VariantType.Int16)
+					print('Value 215 set to:',value)
+				elif check == 216:
+					val2.set_value(value, ua.VariantType.Int16)
+					print('Value 216 set to:',value)
+				elif check == 217:
+					val3.set_value(value, ua.VariantType.Float)
+					print('Value 217 set to:',value)
+				elif check == 218:
+					val4.set_value(value, ua.VariantType.Float)
+					print('Value 218 set to:',value)
+				elif check == 219:
+					val5.set_value(value, ua.VariantType.Float)
+					print('Value 219 set to:',value)
+				elif check == 220:
+					val6.set_value(value, ua.VariantType.Float)
+					print('Value 220 set to:',value)
+				else:
+						print(".")
 
 
 # Create two threads as follows
@@ -147,6 +187,7 @@ try:
    _thread.start_new_thread( serverOne, ( ) )
    _thread.start_new_thread( serverOneCC, ( ) )
    _thread.start_new_thread( serverTwo, ( ) )
+   _thread.start_new_thread( serverTwoCC, ( ) )
 except:
    print ("Error: unable to start thread")
 

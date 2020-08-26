@@ -8,7 +8,7 @@ HOST1 = '10.1.0.11'
 HOST1B = '10.1.0.12'
 HOST2 = '10.1.0.31'
 PORT1 = 993
-PORT2 = 992
+PORT2 = 994
 PORTS1 = 881
 PORTS2 = 883
 
@@ -44,8 +44,8 @@ def serverOne():
 							conn1.sendall(datanew1)
 							time.sleep(0.2)
 							conn1.sendall(datanew2)
-							print('S1:',strval1)
-							print('S2:',strval1b)
+							#print('S1:',strval1)
+							#print('S2:',strval1b)
 							
 
 
@@ -68,17 +68,31 @@ def serverTwo():
 						while b < 6:
 							#recive data from server A
 							data2 = conn2.recv(1024)
+							data2new = data2.decode("utf-8")
+							if 'mu01' in data2new:
+								part1,part2 = data2new.split("_")
+								print(part2)
+								part2x = part2.encode()
+								sc2.sendall(part2x)
+							elif 'mu02' in data2new:
+								part1,part2 = data2new.split("_")
+								print(part2)
+								part2x = part2.encode()
+								sc2B.sendall(part2x)
+							else:
+								print(".")
+
 							#send data to server C
-							sc2.sendall(data2)
-							sc2B.sendall(data2)
-							print('S2:',data2)
+							#sc2.sendall(data2)
+							#sc2B.sendall(data2)
+							
 
 						
 
 # Create two threads as follows
 try:
    _thread.start_new_thread( serverOne, ( ) )
-   #_thread.start_new_thread( serverTwo, ( ) )
+   _thread.start_new_thread( serverTwo, ( ) )
 except:
    print ("Error: unable to start thread")
 
