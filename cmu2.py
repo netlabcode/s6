@@ -28,40 +28,6 @@ def db_connect():
 	return con
 
 
-# Define a function for the thread
-def serverMU01():
-	with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s1:
-		s1.connect((MU01, PORT1))
-		x = 1
-		while x < 6:
-			#recive data from server
-			data1 = s1.recv(1024)
-			
-			#parsing data
-			data1new = data1.decode("utf-8")
-			a,b,ce,d,e,f = data1new.split("-")
-			print(type(a))
-			print(type(d))
-
-			#save db
-			con = db_connect()
-			c = con.cursor()
-			datet = datetime.datetime.now()
-			c.execute("INSERT INTO mu01(xtime, B23_Li_23_24_CB_ctrl, B23_Li_23_24_CB_res, B23_Li_23_24_I_res, B23_Li_23_24_P_res, B23_Li_23_24_Q_res, B23_Li_23_24_V_res) VALUES (?,?,?,?,?,?,?)",(datet,int(a),int(b),float(ce),float(d),float(e),float(f)))
-			#c.execute("INSERT INTO mu01(xtime, B23_Li_23_24_CB_ctrl) VALUES (?,?)",(datet,int(a)))
-			con.commit()
-			con.close()
-
-
-
-def serverMU02():
-	with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s2:
-		s2.connect((MU02, PORT1))
-		b = 1
-		while b < 6:
-			#recive data from server
-			data2 = s2.recv(1024)
-			print('MU02:',data2)
 
 # Define a function for the thread
 def serverXMU01():

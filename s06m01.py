@@ -120,24 +120,24 @@ def serverTwo():
 
 				value = int(b)
 				check = int(a)
-				if check == 215:
+				if check == 212:
 					val1.set_value(value, ua.VariantType.Int16)
+					print('Value 212 set to:',value)
+				elif check == 213:
+					val2.set_value(value, ua.VariantType.Int16)
+					print('Value 213 set to:',value)
+				elif check == 214:
+					val3.set_value(value, ua.VariantType.Float)
+					print('Value 214 set to:',value)
+				elif check == 215:
+					val4.set_value(value, ua.VariantType.Float)
 					print('Value 215 set to:',value)
 				elif check == 216:
-					val2.set_value(value, ua.VariantType.Int16)
+					val5.set_value(value, ua.VariantType.Float)
 					print('Value 216 set to:',value)
 				elif check == 217:
-					val3.set_value(value, ua.VariantType.Float)
-					print('Value 217 set to:',value)
-				elif check == 218:
-					val4.set_value(value, ua.VariantType.Float)
-					print('Value 218 set to:',value)
-				elif check == 219:
-					val5.set_value(value, ua.VariantType.Float)
-					print('Value 219 set to:',value)
-				elif check == 220:
 					val6.set_value(value, ua.VariantType.Float)
-					print('Value 220 set to:',value)
+					print('Value 217 set to:',value)
 				else:
 						print(".")
 
@@ -160,24 +160,24 @@ def serverTwoCC():
 
 				value = int(b)
 				check = int(a)
-				if check == 215:
+				if check == 212:
 					val1.set_value(value, ua.VariantType.Int16)
+					print('Value 212 set to:',value)
+				elif check == 213:
+					val2.set_value(value, ua.VariantType.Int16)
+					print('Value 213 set to:',value)
+				elif check == 214:
+					val3.set_value(value, ua.VariantType.Float)
+					print('Value 214 set to:',value)
+				elif check == 215:
+					val4.set_value(value, ua.VariantType.Float)
 					print('Value 215 set to:',value)
 				elif check == 216:
-					val2.set_value(value, ua.VariantType.Int16)
+					val5.set_value(value, ua.VariantType.Float)
 					print('Value 216 set to:',value)
 				elif check == 217:
-					val3.set_value(value, ua.VariantType.Float)
-					print('Value 217 set to:',value)
-				elif check == 218:
-					val4.set_value(value, ua.VariantType.Float)
-					print('Value 218 set to:',value)
-				elif check == 219:
-					val5.set_value(value, ua.VariantType.Float)
-					print('Value 219 set to:',value)
-				elif check == 220:
 					val6.set_value(value, ua.VariantType.Float)
-					print('Value 220 set to:',value)
+					print('Value 217 set to:',value)
 				else:
 						print(".")
 
