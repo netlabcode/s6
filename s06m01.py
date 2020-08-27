@@ -52,7 +52,7 @@ def serverOne():
 					#covert inetger to string
 					#stringd = str(value)
 
-					stringd = str(value1)+"-"+str(value2)+"-"+str(value3)+"-"+str(value4)+"-"+str(value5)+"-"+str(value6)
+					stringd = str(value1)+"+"+str(value2)+"+"+str(value3)+"+"+str(value4)+"+"+str(value5)+"+"+str(value6)
 
 					#convert string to bytes data
 					data1 = stringd.encode()
@@ -88,7 +88,7 @@ def serverOneCC():
 					#covert inetger to string
 					#stringd = str(value)
 
-					stringd = str(value1)+"-"+str(value2)+"-"+str(value3)+"-"+str(value4)+"-"+str(value5)+"-"+str(value6)
+					stringd = str(value1)+"+"+str(value2)+"+"+str(value3)+"+"+str(value4)+"+"+str(value5)+"+"+str(value6)
 
 					#convert string to bytes data
 					data1 = stringd.encode()
@@ -115,7 +115,7 @@ def serverTwo():
 
 				data2 = conn2.recv(1024)
 				data3 = data2.decode("utf-8")
-				a,b = data3.split("-")
+				a,b = data3.split("+")
 
 
 				value = int(b)
@@ -155,7 +155,7 @@ def serverTwoCC():
 
 				data2 = conn2.recv(1024)
 				data3 = data2.decode("utf-8")
-				a,b = data3.split("-")
+				a,b = data3.split("+")
 
 
 				value = int(b)
