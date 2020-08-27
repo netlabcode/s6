@@ -50,7 +50,7 @@ def serverMU01():
 				#c.execute("INSERT INTO mu01(xtime, B23_Li_23_24_CB_ctrl) VALUES (?,?)",(datet,int(a)))
 				con.commit()
 				con.close()
-			except Exception"
+			except Exception:
 				print("mu01")
 				pass
 
