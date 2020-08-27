@@ -38,7 +38,7 @@ def ccControl():
 			string1x = str(value1x)
 
 			#stringd = str(value1)+"-"+str(value2)+"-"+str(value3)
-			print("Format: mu01_id-value")
+			print("Format: mu01_id+value")
 			string1x = str(input("Command entry: "))
 
 			#convert string to bytes data

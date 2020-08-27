@@ -32,8 +32,8 @@ def serverOne():
 							#recive data from server A
 							data1 = sc1.recv(1024)
 							data1b = sc1B.recv(1024)
-							strval1 = "mu01-"+str(data1.decode("utf-8"))
-							strval1b = "mu02-"+str(data1b.decode("utf-8"))
+							strval1 = "mu01+"+str(data1.decode("utf-8"))
+							strval1b = "mu02+"+str(data1b.decode("utf-8"))
 
 							data1new = data1.decode("utf-8")
 							#stringd = str(data1)+"-"+str(data1b)
