@@ -19,12 +19,12 @@ url = "opc.tcp://10.1.0.99:8899/freeopcua/server/"
 client = Client(url)
 client.connect()
 print("connected to OPC UA Server")
-val1 = client.get_node("ns=2;i=221")
-val2 = client.get_node("ns=2;i=222")
-val3 = client.get_node("ns=2;i=223")
-val4 = client.get_node("ns=2;i=224")
-val5 = client.get_node("ns=2;i=225")
-val6 = client.get_node("ns=2;i=226")
+val1 = client.get_node("ns=2;i=218")
+val2 = client.get_node("ns=2;i=219")
+val3 = client.get_node("ns=2;i=220")
+val4 = client.get_node("ns=2;i=221")
+val5 = client.get_node("ns=2;i=222")
+val6 = client.get_node("ns=2;i=223")
 
 
 # Define a function for the thread
