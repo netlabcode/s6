@@ -37,18 +37,22 @@ def serverMU01():
 			#recive data from server
 			data1 = s1.recv(1024)
 			
-			#parsing data
-			data1new = data1.decode("utf-8")
-			a,b,ce,d,e,f = data1new.split("-")
+			try: 
+				#parsing data
+				data1new = data1.decode("utf-8")
+				a,b,ce,d,e,f = data1new.split("-")
 
-			#save db
-			con = db_connect()
-			c = con.cursor()
-			datet = datetime.datetime.now()
-			c.execute("INSERT INTO mu01(xtime, B23_Li_23_24_CB_ctrl, B23_Li_23_24_CB_res, B23_Li_23_24_I_res, B23_Li_23_24_P_res, B23_Li_23_24_Q_res, B23_Li_23_24_V_res) VALUES (?,?,?,?,?,?,?)",(datet,int(a),int(b),float(ce),float(d),float(e),float(f)))
-			#c.execute("INSERT INTO mu01(xtime, B23_Li_23_24_CB_ctrl) VALUES (?,?)",(datet,int(a)))
-			con.commit()
-			con.close()
+				#save db
+				con = db_connect()
+				c = con.cursor()
+				datet = datetime.datetime.now()
+				c.execute("INSERT INTO mu01(xtime, B23_Li_23_24_CB_ctrl, B23_Li_23_24_CB_res, B23_Li_23_24_I_res, B23_Li_23_24_P_res, B23_Li_23_24_Q_res, B23_Li_23_24_V_res) VALUES (?,?,?,?,?,?,?)",(datet,int(a),int(b),float(ce),float(d),float(e),float(f)))
+				#c.execute("INSERT INTO mu01(xtime, B23_Li_23_24_CB_ctrl) VALUES (?,?)",(datet,int(a)))
+				con.commit()
+				con.close()
+			except Exception"
+				print("mu01")
+				pass
 
 
 
@@ -63,16 +67,20 @@ def serverMU02():
 
 			#parsing data
 			data1new = data2.decode("utf-8")
-			a,b,ce,d,e,f = data1new.split("-")
 
-			#save db
-			con = db_connect()
-			c = con.cursor()
-			datet = datetime.datetime.now()
-			c.execute("INSERT INTO mu02(xtime, B23_Li_22_23_CB_ctrl, B23_Li_22_23_CB_res, B23_Li_22_23_I_res, B23_Li_22_23_P_res, B23_Li_22_23_Q_res, B23_Li_22_23_V_res) VALUES (?,?,?,?,?,?,?)",(datet,int(a),int(b),float(ce),float(d),float(e),float(f)))
-			#c.execute("INSERT INTO mu01(xtime, B23_Li_23_24_CB_ctrl) VALUES (?,?)",(datet,int(a)))
-			con.commit()
-			con.close()
+			try:
+				a,b,ce,d,e,f = data1new.split("-")
+				#save db
+				con = db_connect()
+				c = con.cursor()
+				datet = datetime.datetime.now()
+				c.execute("INSERT INTO mu02(xtime, B23_Li_22_23_CB_ctrl, B23_Li_22_23_CB_res, B23_Li_22_23_I_res, B23_Li_22_23_P_res, B23_Li_22_23_Q_res, B23_Li_22_23_V_res) VALUES (?,?,?,?,?,?,?)",(datet,int(a),int(b),float(ce),float(d),float(e),float(f)))
+				#c.execute("INSERT INTO mu01(xtime, B23_Li_23_24_CB_ctrl) VALUES (?,?)",(datet,int(a)))
+				con.commit()
+				con.close()
+			except Exception:
+				print("mu02")
+				pass
 
 
 
