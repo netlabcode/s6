@@ -42,5 +42,6 @@ git commit -m "first commit"
 git remote add origin https://github.com/netlabcode/newtest.git
 git remote rm origin
 git push -u origin master
+git pull
 
 ls -ltr
