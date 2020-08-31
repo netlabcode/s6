@@ -129,8 +129,12 @@ def run():
     info(os.system('ip addr add 10.1.0.99/24 dev s1'))
     info(os.system('ip link set s1 up'))
     
-    #info( net[ 'm1' ].cmd( 'python3 mu1.py &amp' ) )
-    #info( net[ 'm2' ].cmd( 'python3 mu2.py &amp' ) )
+    info( net[ 'm1' ].cmd( 'python3 s06m01.py &amp' ) )
+    info( net[ 'm2' ].cmd( 'python3 s06m02.py &amp' ) )
+    info( net[ 'm3' ].cmd( 'python3 s06m03.py &amp' ) )
+    info( net[ 'm4' ].cmd( 'python3 s06m04.py &amp' ) )
+    info( net[ 'm5' ].cmd( 'python3 s06m05.py &amp' ) )
+    info( net[ 'm6' ].cmd( 'python3 s06m06.py &amp' ) )
     #info( net[ 'm3' ].cmd( 'python3 hello.py' ) )
     
     CLI( net )
