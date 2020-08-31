@@ -184,25 +184,25 @@ def serverTwo():
 					val6.set_value(value, ua.VariantType.Float)
 					print('Value 229 set to:',value)
 				elif check == 230:
-					val2.set_value(value, ua.VariantType.Int16)
+					val7.set_value(value, ua.VariantType.Int16)
 					print('Value 230 set to:',value)
 				elif check == 231:
-					val3.set_value(value, ua.VariantType.Float)
+					val8.set_value(value, ua.VariantType.Float)
 					print('Value 231 set to:',value)
 				elif check == 232:
-					val4.set_value(value, ua.VariantType.Float)
+					val9.set_value(value, ua.VariantType.Float)
 					print('Value 232 set to:',value)
 				elif check == 233:
-					val5.set_value(value, ua.VariantType.Float)
+					val10.set_value(value, ua.VariantType.Float)
 					print('Value 233 set to:',value)
 				elif check == 234:
-					val6.set_value(value, ua.VariantType.Float)
+					val11.set_value(value, ua.VariantType.Float)
 					print('Value 234 set to:',value)
 				elif check == 235:
-					val5.set_value(value, ua.VariantType.Float)
+					val12.set_value(value, ua.VariantType.Float)
 					print('Value 235 set to:',value)
 				elif check == 236:
-					val6.set_value(value, ua.VariantType.Float)
+					val13.set_value(value, ua.VariantType.Float)
 					print('Value 236 set to:',value)
 				else:
 						print(".")

@@ -172,13 +172,13 @@ def serverTwo():
 					val6.set_value(value, ua.VariantType.Float)
 					print('Value 250 set to:',value)
 				elif check == 251:
-					val2.set_value(value, ua.VariantType.Int16)
+					val7.set_value(value, ua.VariantType.Int16)
 					print('Value 251 set to:',value)
 				elif check == 252:
-					val3.set_value(value, ua.VariantType.Float)
+					val8.set_value(value, ua.VariantType.Float)
 					print('Value 252 set to:',value)
 				elif check == 253:
-					val4.set_value(value, ua.VariantType.Float)
+					val9.set_value(value, ua.VariantType.Float)
 					print('Value 253 set to:',value)
 				else:
 						print(".")
@@ -220,13 +220,13 @@ def serverTwoCC():
 					val6.set_value(value, ua.VariantType.Float)
 					print('Value 250 set to:',value)
 				elif check == 251:
-					val2.set_value(value, ua.VariantType.Int16)
+					val7.set_value(value, ua.VariantType.Int16)
 					print('Value 251 set to:',value)
 				elif check == 252:
-					val3.set_value(value, ua.VariantType.Float)
+					val8.set_value(value, ua.VariantType.Float)
 					print('Value 252 set to:',value)
 				elif check == 253:
-					val4.set_value(value, ua.VariantType.Float)
+					val9.set_value(value, ua.VariantType.Float)
 					print('Value 253 set to:',value)
 				else:
 						print(".")
