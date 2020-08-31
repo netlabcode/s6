@@ -11,10 +11,10 @@ import datetime
 HOST2 = '10.1.0.31'
 MU01 = '10.1.0.11'
 MU02 = '10.1.0.12'
-MU02 = '10.1.0.13'
-MU03 = '10.1.0.14'
-MU04 = '10.1.0.15'
-MU05 = '10.1.0.16'
+MU03 = '10.1.0.13'
+MU04 = '10.1.0.14'
+MU05 = '10.1.0.15'
+MU06 = '10.1.0.16'
 PORT1 = 991
 PORT2 = 992
 
@@ -133,7 +133,7 @@ def serverXMUCC():
 									sx6.sendall(part2x)
 								else:
 									print(".")
-									
+
 								time.sleep(1)
 								#sx2.close()
 
