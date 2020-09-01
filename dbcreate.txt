@@ -1,0 +1,61 @@
+
+
+CREATE TABLE "mu03" (
+	"id"	INTEGER NOT NULL,
+	"xtime"	DATETIME NOT NULL,
+	"B23_Ld_V_res"		DECIMAL(20),
+	"B23_Tr_CB_ctrl"	INTEGER,
+	"B23_Tr_CB_res"		INTEGER,
+	"B23_Tr_f_res"		DECIMAL(20),
+	"B23_Tr_hv_P_res"	DECIMAL(20),
+	"B23_Tr_hv_Q_res"	DECIMAL(20),
+	"B23_Tr_Ld_res"		DECIMAL(20),
+	"B23_Tr_lv_P_res"	DECIMAL(20),
+	"B23_Tr_lv_Q_res"	DECIMAL(20),
+	"B23_Tr_tap"		INTEGER,
+	"B23_Tr_tap_ctrl"	INTEGER,
+	"B23_Tr_tap_mode"	INTEGER,
+	"B23_Tr_tap_res"	INTEGER,
+	PRIMARY KEY("id")
+);
+
+
+
+CREATE TABLE "mu04" (
+	"id"	INTEGER NOT NULL,
+	"xtime"	DATETIME NOT NULL,
+	"B23_Ld_CB_ctrl"		INTEGER,
+	"B23_Ld_CB_res"			INTEGER,
+	"B23_Ld_I_res"			DECIMAL(20),
+	"B23_Ld_P_res"			DECIMAL(20),
+	"B23_Ld_Q_res"			DECIMAL(20),
+	"B23_Tr_V_res"			DECIMAL(20),
+	PRIMARY KEY("id")
+);
+
+
+CREATE TABLE "mu05" (
+	"id"	INTEGER NOT NULL,
+	"xtime"	DATETIME NOT NULL,
+	"B36_Tr_CB_ctrl"		INTEGER,
+	"B36_Tr_CB_res"			INTEGER,
+	PRIMARY KEY("id")
+);
+
+
+CREATE TABLE "mu06" (
+	"id"	INTEGER NOT NULL,
+	"xtime"	DATETIME NOT NULL,
+	"B36_G7_CB_ctrl"	INTEGER,
+	"B36_G7_CB_res"		INTEGER,
+	"B36_G7_f_res"		DECIMAL(20),
+	"B36_G7_Ld_res"		DECIMAL(20),
+	"B36_G7_P_ctrl"		DECIMAL(20),
+	"B36_G7_P_res"		DECIMAL(20),
+	"B36_G7_Q_res"		DECIMAL(20),
+	"B36_G7_V_ctrl"		DECIMAL(20),
+	"B36_G7_V_res"		DECIMAL(20),
+	PRIMARY KEY("id")
+);
+
+
