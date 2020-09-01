@@ -60,6 +60,38 @@ def serverOne():
 				except Exception:
 					print("mu2")
 					pass
+			elif 'mu03' in data1new:
+				try:
+					n,a,b,ce,d,e,f,g,h,i,j,k,l,m = data1new.split("+")
+					c.execute("INSERT INTO mu03(xtime, B23_Ld_V_res, B23_Tr_CB_ctrl, B23_Tr_CB_res, B23_Tr_f_res, B23_Tr_hv_P_res, B23_Tr_hv_Q_res, B23_Tr_Ld_res, B23_Tr_lv_P_res, B23_Tr_lv_Q_res, B23_Tr_tap, B23_Tr_tap_ctrl, B23_Tr_tap_mode, B23_Tr_tap_res) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)",(datet,float(a),int(b),int(ce),float(d),float(e),float(f),float(g),float(h),float(i),int(j),int(k),int(l),int(m)))
+					print(a)
+				except Exception:
+					print("mu3")
+					pass
+			elif 'mu04' in data1new:
+				try:
+					n,a,b,ce,d,e,f = data1new.split("+")
+					c.execute("INSERT INTO mu04(xtime, B23_Ld_CB_ctrl, B23_Ld_CB_res, B23_Ld_I_res, B23_Ld_P_res, B23_Ld_Q_res, B23_Tr_V_res) VALUES (?,?,?,?,?,?,?)",(datet,int(a),int(b),float(ce),float(d),float(e),float(f)))
+					print(a)
+				except Exception:
+					print("mu4")
+					pass
+			elif 'mu05' in data1new:
+				try:
+					n,a,b = data1new.split("+")
+					c.execute("INSERT INTO mu05(xtime, B36_Tr_CB_ctrl, B36_Tr_CB_res) VALUES (?,?,?)",(datet,int(a),int(b)))
+					print(a)
+				except Exception:
+					print("mu5")
+					pass
+			elif 'mu06' in data1new:
+				try:
+					n,a,b,ce,d,e,f,g,h,i = data1new.split("+")
+					c.execute("INSERT INTO mu06(xtime, B36_G7_CB_ctrl, B36_G7_CB_res, B36_G7_f_res, B36_G7_Ld_res, B36_G7_P_ctrl, B36_G7_P_res, B36_G7_Q_res, B36_G7_V_ctrl, B36_G7_V_res) VALUES (?,?,?,?,?,?,?,?,?,?)",(datet,int(a),int(b),float(ce),float(d),float(e),float(f),float(g),float(h),float(i)))
+					print(a)
+				except Exception:
+					print("mu6")
+					pass
 			else:
 				print('.')
 
