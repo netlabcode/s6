@@ -25,8 +25,9 @@ def init_db():
 @app.route('/')
 def stacked_bar_chart():
     # Read sqlite query results into a pandas DataFrame
-    con = sqlite3.connect("s06.db")
-    df = pd.read_sql_query("SELECT * from mu02", con)
+    con = sqlite3.connect("cc.db")
+    #df = pd.read_sql_query("SELECT * from mu02", con)
+    df = pd.read_sql_query("SELECT TOP 10 * FROM mu02 ORDER BY id DESC", con)
     dfx = df[-40:]
 
     # verify that result of SQL query is stored in the dataframe
@@ -34,7 +35,7 @@ def stacked_bar_chart():
 
     con.close()
 
-    xid = dfx['xtime'].values.tolist() # x axis
+    xid = dfx['id'].values.tolist() # x axis
     data1 = dfx['B23_Li_22_23_P_res'].values.tolist()
     data2 = dfx['B23_Li_22_23_V_res'].values.tolist()
 
