@@ -26,7 +26,7 @@ def init_db():
 def stacked_bar_chart():
     # Read sqlite query results into a pandas DataFrame
     con = sqlite3.connect("cc.db")
-    df = pd.read_sql_query("SELECT * from mu02", con)
+    df = pd.read_sql_query("SELECT * from mu06", con)
     #df = pd.read_sql_query("SELECT TOP 10 * FROM mu02 ORDER BY id DESC", con)
     dfx = df[-40:]
 
@@ -36,8 +36,8 @@ def stacked_bar_chart():
     con.close()
 
     xid = dfx['id'].values.tolist() # x axis
-    data1 = dfx['B23_Li_22_23_P_res'].values.tolist()
-    data2 = dfx['B23_Li_22_23_V_res'].values.tolist()
+    data1 = dfx['B36_G7_P_res'].values.tolist()
+    data2 = dfx['B36_G7_V_res'].values.tolist()
 
     return render_template('linegraph.html', xid=xid, data1=data1, data2=data2)
 
