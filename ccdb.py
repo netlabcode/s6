@@ -43,6 +43,7 @@ def serverOne():
 
 			#print(data1new)
 
+			print (data1new)
 
 			if 'mu01' in data1new:
 				try:
