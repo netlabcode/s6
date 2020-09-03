@@ -20,6 +20,7 @@ sudo cp /usr/bin/ovs-testcontroller /usr/bin/ovs-controller
 ps -x | grep python
 ps -x | grep script.py
 kill 3935 (process ID)
+top
 
 python script.py &amp
 &amp
@@ -45,3 +46,4 @@ git push -u origin master
 git pull
 
 ls -ltr
+
