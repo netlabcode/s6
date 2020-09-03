@@ -47,50 +47,26 @@ def serverOne():
 				a = 1
 				value = 2
 
+				try: 
 				#Update OPC value
-				value1 = val1.get_value()
-				value2 = val2.get_value()
-				value3 = val3.get_value()
-				value4 = val4.get_value()
-				value5 = val5.get_value()
-				value6 = val6.get_value()
-				value7 = val7.get_value()
-				value8 = val8.get_value()
-				value9 = val9.get_value()
-				value10 = val10.get_value()
-				value11 = val11.get_value()
-				value12 = val12.get_value()
-				value13 = val13.get_value()
-
-				#covert inetger to string
-				#stringd = str(value)
-
-				stringd = str(value1)+"+"+str(value2)+"+"+str(value3)+"+"+str(value4)+"+"+str(value5)+"+"+str(value6)+"+"+str(value7)+"+"+str(value8)+"+"+str(value9)+"+"+str(value10)+"+"+str(value11)+"+"+str(value12)+"+"+str(value13)
-
-				#convert string to bytes data
-				data1 = stringd.encode()
-
-				#send data back to client
-				conn1.sendall(data1)
-
-				#print('S1:',data1)
-				time.sleep(1)
-
-				"""
-				while a < 6:
-
-					#Update OPC value
 					value1 = val1.get_value()
 					value2 = val2.get_value()
 					value3 = val3.get_value()
 					value4 = val4.get_value()
 					value5 = val5.get_value()
 					value6 = val6.get_value()
+					value7 = val7.get_value()
+					value8 = val8.get_value()
+					value9 = val9.get_value()
+					value10 = val10.get_value()
+					value11 = val11.get_value()
+					value12 = val12.get_value()
+					value13 = val13.get_value()
 
 					#covert inetger to string
 					#stringd = str(value)
 
-					stringd = str(value1)+"-"+str(value2)+"-"+str(value3)+"-"+str(value4)+"-"+str(value5)+"-"+str(value6)
+					stringd = str(value1)+"+"+str(value2)+"+"+str(value3)+"+"+str(value4)+"+"+str(value5)+"+"+str(value6)+"+"+str(value7)+"+"+str(value8)+"+"+str(value9)+"+"+str(value10)+"+"+str(value11)+"+"+str(value12)+"+"+str(value13)
 
 					#convert string to bytes data
 					data1 = stringd.encode()
@@ -100,7 +76,12 @@ def serverOne():
 
 					#print('S1:',data1)
 					time.sleep(1)
-				"""
+
+				except Exception:
+						print("One")
+						pass
+
+				
 
 # Define a function for the thread
 def serverOneCC():
@@ -115,35 +96,40 @@ def serverOneCC():
 				a = 1
 				value = 2
 
-				#Update OPC value
-				value1 = val1.get_value()
-				value2 = val2.get_value()
-				value3 = val3.get_value()
-				value4 = val4.get_value()
-				value5 = val5.get_value()
-				value6 = val6.get_value()
-				value7 = val7.get_value()
-				value8 = val8.get_value()
-				value9 = val9.get_value()
-				value10 = val10.get_value()
-				value11 = val11.get_value()
-				value12 = val12.get_value()
-				value13 = val13.get_value()
+				try:
+					#Update OPC value
+					value1 = val1.get_value()
+					value2 = val2.get_value()
+					value3 = val3.get_value()
+					value4 = val4.get_value()
+					value5 = val5.get_value()
+					value6 = val6.get_value()
+					value7 = val7.get_value()
+					value8 = val8.get_value()
+					value9 = val9.get_value()
+					value10 = val10.get_value()
+					value11 = val11.get_value()
+					value12 = val12.get_value()
+					value13 = val13.get_value()
 
-				#covert inetger to string
-				#stringd = str(value)
+					#covert inetger to string
+					#stringd = str(value)
 
-				stringd = str(value1)+"+"+str(value2)+"+"+str(value3)+"+"+str(value4)+"+"+str(value5)+"+"+str(value6)+"+"+str(value7)+"+"+str(value8)+"+"+str(value9)+"+"+str(value10)+"+"+str(value11)+"+"+str(value12)+"+"+str(value13)
+					stringd = str(value1)+"+"+str(value2)+"+"+str(value3)+"+"+str(value4)+"+"+str(value5)+"+"+str(value6)+"+"+str(value7)+"+"+str(value8)+"+"+str(value9)+"+"+str(value10)+"+"+str(value11)+"+"+str(value12)+"+"+str(value13)
 
 
-				#convert string to bytes data
-				data1 = stringd.encode()
+					#convert string to bytes data
+					data1 = stringd.encode()
 
-				#send data back to client
-				conn1.sendall(data1)
+					#send data back to client
+					conn1.sendall(data1)
 
-				#print('S1:',data1)
-				time.sleep(1)
+					#print('S1:',data1)
+					time.sleep(1)
+
+				except Exception:
+						print("OneCC")
+						pass
 
 
 # Define a function for the thread
@@ -160,52 +146,58 @@ def serverTwo():
 				value = 2
 				data2 = conn2.recv(1024)
 				data3 = data2.decode("utf-8")
-				a,b = data3.split("+")
+
+				try: 
+					a,b = data3.split("+")
 
 
-				value = int(b)
-				check = int(a)
-				if check == 224:
-					val1.set_value(value, ua.VariantType.Int16)
-					print('Value 224 set to:',value)
-				elif check == 225:
-					val2.set_value(value, ua.VariantType.Int16)
-					print('Value 225 set to:',value)
-				elif check == 226:
-					val3.set_value(value, ua.VariantType.Float)
-					print('Value 226 set to:',value)
-				elif check == 227:
-					val4.set_value(value, ua.VariantType.Float)
-					print('Value 227 set to:',value)
-				elif check == 228:
-					val5.set_value(value, ua.VariantType.Float)
-					print('Value 228 set to:',value)
-				elif check == 229:
-					val6.set_value(value, ua.VariantType.Float)
-					print('Value 229 set to:',value)
-				elif check == 230:
-					val7.set_value(value, ua.VariantType.Int16)
-					print('Value 230 set to:',value)
-				elif check == 231:
-					val8.set_value(value, ua.VariantType.Float)
-					print('Value 231 set to:',value)
-				elif check == 232:
-					val9.set_value(value, ua.VariantType.Float)
-					print('Value 232 set to:',value)
-				elif check == 233:
-					val10.set_value(value, ua.VariantType.Float)
-					print('Value 233 set to:',value)
-				elif check == 234:
-					val11.set_value(value, ua.VariantType.Float)
-					print('Value 234 set to:',value)
-				elif check == 235:
-					val12.set_value(value, ua.VariantType.Float)
-					print('Value 235 set to:',value)
-				elif check == 236:
-					val13.set_value(value, ua.VariantType.Float)
-					print('Value 236 set to:',value)
-				else:
-						print(".")
+					value = int(b)
+					check = int(a)
+					if check == 224:
+						val1.set_value(value, ua.VariantType.Int16)
+						print('Value 224 set to:',value)
+					elif check == 225:
+						val2.set_value(value, ua.VariantType.Int16)
+						print('Value 225 set to:',value)
+					elif check == 226:
+						val3.set_value(value, ua.VariantType.Float)
+						print('Value 226 set to:',value)
+					elif check == 227:
+						val4.set_value(value, ua.VariantType.Float)
+						print('Value 227 set to:',value)
+					elif check == 228:
+						val5.set_value(value, ua.VariantType.Float)
+						print('Value 228 set to:',value)
+					elif check == 229:
+						val6.set_value(value, ua.VariantType.Float)
+						print('Value 229 set to:',value)
+					elif check == 230:
+						val7.set_value(value, ua.VariantType.Int16)
+						print('Value 230 set to:',value)
+					elif check == 231:
+						val8.set_value(value, ua.VariantType.Float)
+						print('Value 231 set to:',value)
+					elif check == 232:
+						val9.set_value(value, ua.VariantType.Float)
+						print('Value 232 set to:',value)
+					elif check == 233:
+						val10.set_value(value, ua.VariantType.Float)
+						print('Value 233 set to:',value)
+					elif check == 234:
+						val11.set_value(value, ua.VariantType.Float)
+						print('Value 234 set to:',value)
+					elif check == 235:
+						val12.set_value(value, ua.VariantType.Float)
+						print('Value 235 set to:',value)
+					elif check == 236:
+						val13.set_value(value, ua.VariantType.Float)
+						print('Value 236 set to:',value)
+					else:
+							print(".")
+
+				except Exception:
+						print("Two")
+						pass
 
 def serverTwoCC():
 	with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s2:
@@ -220,52 +212,58 @@ def serverTwoCC():
 				value = 2
 				data2 = conn2.recv(1024)
 				data3 = data2.decode("utf-8")
-				a,b = data3.split("+")
+
+				try:
+					a,b = data3.split("+")
 
 
-				value = int(b)
-				check = int(a)
-				if check == 224:
-					val1.set_value(value, ua.VariantType.Int16)
-					print('Value 224 set to:',value)
-				elif check == 225:
-					val2.set_value(value, ua.VariantType.Int16)
-					print('Value 225 set to:',value)
-				elif check == 226:
-					val3.set_value(value, ua.VariantType.Float)
-					print('Value 226 set to:',value)
-				elif check == 227:
-					val4.set_value(value, ua.VariantType.Float)
-					print('Value 227 set to:',value)
-				elif check == 228:
-					val5.set_value(value, ua.VariantType.Float)
-					print('Value 228 set to:',value)
-				elif check == 229:
-					val6.set_value(value, ua.VariantType.Float)
-					print('Value 229 set to:',value)
-				elif check == 230:
-					val7.set_value(value, ua.VariantType.Int16)
-					print('Value 230 set to:',value)
-				elif check == 231:
-					val8.set_value(value, ua.VariantType.Float)
-					print('Value 231 set to:',value)
-				elif check == 232:
-					val9.set_value(value, ua.VariantType.Float)
-					print('Value 232 set to:',value)
-				elif check == 233:
-					val10.set_value(value, ua.VariantType.Float)
-					print('Value 233 set to:',value)
-				elif check == 234:
-					val11.set_value(value, ua.VariantType.Float)
-					print('Value 234 set to:',value)
-				elif check == 235:
-					val12.set_value(value, ua.VariantType.Float)
-					print('Value 235 set to:',value)
-				elif check == 236:
-					val13.set_value(value, ua.VariantType.Float)
-					print('Value 236 set to:',value)
-				else:
-						print(".")
+					value = int(b)
+					check = int(a)
+					if check == 224:
+						val1.set_value(value, ua.VariantType.Int16)
+						print('Value 224 set to:',value)
+					elif check == 225:
+						val2.set_value(value, ua.VariantType.Int16)
+						print('Value 225 set to:',value)
+					elif check == 226:
+						val3.set_value(value, ua.VariantType.Float)
+						print('Value 226 set to:',value)
+					elif check == 227:
+						val4.set_value(value, ua.VariantType.Float)
+						print('Value 227 set to:',value)
+					elif check == 228:
+						val5.set_value(value, ua.VariantType.Float)
+						print('Value 228 set to:',value)
+					elif check == 229:
+						val6.set_value(value, ua.VariantType.Float)
+						print('Value 229 set to:',value)
+					elif check == 230:
+						val7.set_value(value, ua.VariantType.Int16)
+						print('Value 230 set to:',value)
+					elif check == 231:
+						val8.set_value(value, ua.VariantType.Float)
+						print('Value 231 set to:',value)
+					elif check == 232:
+						val9.set_value(value, ua.VariantType.Float)
+						print('Value 232 set to:',value)
+					elif check == 233:
+						val10.set_value(value, ua.VariantType.Float)
+						print('Value 233 set to:',value)
+					elif check == 234:
+						val11.set_value(value, ua.VariantType.Float)
+						print('Value 234 set to:',value)
+					elif check == 235:
+						val12.set_value(value, ua.VariantType.Float)
+						print('Value 235 set to:',value)
+					elif check == 236:
+						val13.set_value(value, ua.VariantType.Float)
+						print('Value 236 set to:',value)
+					else:
+							print(".")
+
+				except Exception:
+						print("TwoCC")
+						pass
 
 
 

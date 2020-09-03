@@ -37,23 +37,29 @@ def serverOne():
 				a = 1
 				value = 2
 
-				#Update OPC value
-				value1 = val1.get_value()
-				value2 = val2.get_value()
 
-				#covert inetger to string
-				#stringd = str(value)
+				try: 
+					#Update OPC value
+					value1 = val1.get_value()
+					value2 = val2.get_value()
 
-				stringd = str(value1)+"+"+str(value2)
+					#covert inetger to string
+					#stringd = str(value)
 
-				#convert string to bytes data
-				data1 = stringd.encode()
+					stringd = str(value1)+"+"+str(value2)
 
-				#send data back to client
-				conn1.sendall(data1)
+					#convert string to bytes data
+					data1 = stringd.encode()
 
-				#print('S1:',data1)
-				time.sleep(1)
+					#send data back to client
+					conn1.sendall(data1)
+
+					#print('S1:',data1)
+					time.sleep(1)
+
+				except Exception:
+						print("One")
+						pass
 
 
 
@@ -70,24 +76,30 @@ def serverOneCC():
 				a = 1
 				value = 2
 
-				#Update OPC value
-				value1 = val1.get_value()
-				value2 = val2.get_value()
+
+				try:
+					#Update OPC value
+					value1 = val1.get_value()
+					value2 = val2.get_value()
 
 
-				#covert inetger to string
-				#stringd = str(value)
+					#covert inetger to string
+					#stringd = str(value)
 
-				stringd = str(value1)+"+"+str(value2)
+					stringd = str(value1)+"+"+str(value2)
 
-				#convert string to bytes data
-				data1 = stringd.encode()
+					#convert string to bytes data
+					data1 = stringd.encode()
 
-				#send data back to client
-				conn1.sendall(data1)
+					#send data back to client
+					conn1.sendall(data1)
 
-				#print('S1:',data1)
-				time.sleep(1)
+					#print('S1:',data1)
+					time.sleep(1)
+
+				except Exception:
+						print("OneCC")
+						pass
 
 
 # Define a function for the thread
@@ -104,19 +116,24 @@ def serverTwo():
 				value = 2
 				data2 = conn2.recv(1024)
 				data3 = data2.decode("utf-8")
-				a,b = data3.split("+")
 
+				try: 
+					a,b = data3.split("+")
 
-				value = int(b)
-				check = int(a)
-				if check == 243:
-					val1.set_value(value, ua.VariantType.Int16)
-					print('Value 243 set to:',value)
-				elif check == 244:
-					val2.set_value(value, ua.VariantType.Int16)
-					print('Value 244 set to:',value)
-				else:
-						print(".")
+					value = int(b)
+					check = int(a)
+					if check == 243:
+						val1.set_value(value, ua.VariantType.Int16)
+						print('Value 243 set to:',value)
+					elif check == 244:
+						val2.set_value(value, ua.VariantType.Int16)
+						print('Value 244 set to:',value)
+					else:
+							print(".")
+
+				except Exception:
+						print("Two")
+						pass
 
 def serverTwoCC():
 	with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s2:
@@ -131,19 +148,25 @@ def serverTwoCC():
 				value = 2
 				data2 = conn2.recv(1024)
 				data3 = data2.decode("utf-8")
-				a,b = data3.split("+")
+
+				try:
+					a,b = data3.split("+")
 
 
-				value = int(b)
-				check = int(a)
-				if check == 243:
-					val1.set_value(value, ua.VariantType.Int16)
-					print('Value 243 set to:',value)
-				elif check == 244:
-					val2.set_value(value, ua.VariantType.Int16)
-					print('Value 244 set to:',value)
-				else:
-						print(".")
+					value = int(b)
+					check = int(a)
+					if check == 243:
+						val1.set_value(value, ua.VariantType.Int16)
+						print('Value 243 set to:',value)
+					elif check == 244:
+						val2.set_value(value, ua.VariantType.Int16)
+						print('Value 244 set to:',value)
+					else:
+							print(".")
+
+				except Exception:
+						print("TwoCC")
+						pass
 
 
 
