@@ -50,7 +50,7 @@ S24 = node.add_object(addspace,"S24")
 S25 = node.add_object(addspace,"S25")
 S26 = node.add_object(addspace,"S26")
 S27 = node.add_object(addspace,"S27")
-PF = node.add_object(addspace,"PF")
+XPF = node.add_object(addspace,"XPF")
 
 
 S1_M1_B39_Li_01_39_CB_ctrl =S01.add_variable(addspace,"S1_M1_B39_Li_01_39_CB_ctrl",variant)
@@ -1654,11 +1654,11 @@ S27_M3_B14_Li_04_14_Q_res.set_writable(True)
 S27_M3_B14_Li_04_14_V_res =S27.add_variable(addspace,"S27_M3_B14_Li_04_14_V_res",variant2)
 S27_M3_B14_Li_04_14_V_res.set_writable(True)
 
-MODE =PF.add_variable(addspace,"MODE",variant)
+MODE =XPF.add_variable(addspace,"MODE",variant)
 MODE.set_writable(True)
-READY =PF.add_variable(addspace,"READY",variant)
+READY =XPF.add_variable(addspace,"READY",variant)
 READY.set_writable(True)
-GEN_PSUM_RES =PF.add_variable(addspace,"GEN_PSUM_RES",variant2)
+GEN_PSUM_RES =XPF.add_variable(addspace,"GEN_PSUM_RES",variant2)
 GEN_PSUM_RES.set_writable(True)
 
 
