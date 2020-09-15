@@ -19,12 +19,12 @@ url = "opc.tcp://10.1.0.99:8899/freeopcua/server/"
 client = Client(url)
 client.connect()
 print("connected to OPC UA Server")
-val1 = client.get_node("ns=2;i=237")
-val2 = client.get_node("ns=2;i=238")
-val3 = client.get_node("ns=2;i=239")
-val4 = client.get_node("ns=2;i=240")
-val5 = client.get_node("ns=2;i=241")
-val6 = client.get_node("ns=2;i=242")
+val1 = client.get_node("ns=2;i=238")
+val2 = client.get_node("ns=2;i=239")
+val3 = client.get_node("ns=2;i=240")
+val4 = client.get_node("ns=2;i=241")
+val5 = client.get_node("ns=2;i=242")
+val6 = client.get_node("ns=2;i=243")
 
 
 # Define a function for the thread
@@ -130,24 +130,24 @@ def serverTwo():
 
 					value = int(b)
 					check = int(a)
-					if check == 237:
+					if check == 238:
 						val1.set_value(value, ua.VariantType.Int16)
-						print('Value 237 set to:',value)
-					elif check == 238:
-						val2.set_value(value, ua.VariantType.Int16)
 						print('Value 238 set to:',value)
 					elif check == 239:
-						val3.set_value(value, ua.VariantType.Float)
+						val2.set_value(value, ua.VariantType.Int16)
 						print('Value 239 set to:',value)
 					elif check == 240:
-						val4.set_value(value, ua.VariantType.Float)
+						val3.set_value(value, ua.VariantType.Float)
 						print('Value 240 set to:',value)
 					elif check == 241:
-						val5.set_value(value, ua.VariantType.Float)
+						val4.set_value(value, ua.VariantType.Float)
 						print('Value 241 set to:',value)
 					elif check == 242:
-						val6.set_value(value, ua.VariantType.Float)
+						val5.set_value(value, ua.VariantType.Float)
 						print('Value 242 set to:',value)
+					elif check == 243:
+						val6.set_value(value, ua.VariantType.Float)
+						print('Value 243 set to:',value)
 					else:
 							print(".")
 
@@ -174,24 +174,24 @@ def serverTwoCC():
 
 					value = int(b)
 					check = int(a)
-					if check == 237:
+					if check == 238:
 						val1.set_value(value, ua.VariantType.Int16)
-						print('Value 237 set to:',value)
-					elif check == 238:
-						val2.set_value(value, ua.VariantType.Int16)
 						print('Value 238 set to:',value)
 					elif check == 239:
-						val3.set_value(value, ua.VariantType.Float)
+						val2.set_value(value, ua.VariantType.Int16)
 						print('Value 239 set to:',value)
 					elif check == 240:
-						val4.set_value(value, ua.VariantType.Float)
+						val3.set_value(value, ua.VariantType.Float)
 						print('Value 240 set to:',value)
 					elif check == 241:
-						val5.set_value(value, ua.VariantType.Float)
+						val4.set_value(value, ua.VariantType.Float)
 						print('Value 241 set to:',value)
 					elif check == 242:
-						val6.set_value(value, ua.VariantType.Float)
+						val5.set_value(value, ua.VariantType.Float)
 						print('Value 242 set to:',value)
+					elif check == 243:
+						val6.set_value(value, ua.VariantType.Float)
+						print('Value 243 set to:',value)
 					else:
 							print(".")
 

@@ -1,4 +1,8 @@
-sudssh -X crof11.ewi.tudelft.nl
+ssh -X crof11.ewi.tudelft.nl
+ssh -X crof12.ewi.tudelft.nl
+
+ssh -X 131.180.165.16
+
 sudo fuser -k 6653/tcp
 
 sudo mn -c
@@ -20,7 +24,6 @@ sudo cp /usr/bin/ovs-testcontroller /usr/bin/ovs-controller
 ps -x | grep python
 ps -x | grep script.py
 kill 3935 (process ID)
-top
 
 python script.py &amp
 &amp
@@ -47,3 +50,8 @@ git pull
 
 ls -ltr
 
+
+sudo nice -n17 python3 suball.py
+sudo ps -el | grep python
+
+sudo cpulimit --pid 109108 --limit 5

@@ -19,8 +19,8 @@ url = "opc.tcp://10.1.0.99:8899/freeopcua/server/"
 client = Client(url)
 client.connect()
 print("connected to OPC UA Server")
-val1 = client.get_node("ns=2;i=243")
-val2 = client.get_node("ns=2;i=244")
+val1 = client.get_node("ns=2;i=244")
+val2 = client.get_node("ns=2;i=245")
 
 
 
@@ -122,12 +122,12 @@ def serverTwo():
 
 					value = int(b)
 					check = int(a)
-					if check == 243:
+					if check == 244:
 						val1.set_value(value, ua.VariantType.Int16)
-						print('Value 243 set to:',value)
-					elif check == 244:
-						val2.set_value(value, ua.VariantType.Int16)
 						print('Value 244 set to:',value)
+					elif check == 245:
+						val2.set_value(value, ua.VariantType.Int16)
+						print('Value 245 set to:',value)
 					else:
 							print(".")
 
@@ -155,12 +155,12 @@ def serverTwoCC():
 
 					value = int(b)
 					check = int(a)
-					if check == 243:
+					if check == 244:
 						val1.set_value(value, ua.VariantType.Int16)
-						print('Value 243 set to:',value)
-					elif check == 244:
-						val2.set_value(value, ua.VariantType.Int16)
 						print('Value 244 set to:',value)
+					elif check == 245:
+						val2.set_value(value, ua.VariantType.Int16)
+						print('Value 245 set to:',value)
 					else:
 							print(".")
 

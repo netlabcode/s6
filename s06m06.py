@@ -19,15 +19,15 @@ url = "opc.tcp://10.1.0.99:8899/freeopcua/server/"
 client = Client(url)
 client.connect()
 print("connected to OPC UA Server")
-val1 = client.get_node("ns=2;i=245")
-val2 = client.get_node("ns=2;i=246")
-val3 = client.get_node("ns=2;i=247")
-val4 = client.get_node("ns=2;i=248")
-val5 = client.get_node("ns=2;i=249")
-val6 = client.get_node("ns=2;i=250")
-val7 = client.get_node("ns=2;i=251")
-val8 = client.get_node("ns=2;i=252")
-val9 = client.get_node("ns=2;i=253")
+val1 = client.get_node("ns=2;i=246")
+val2 = client.get_node("ns=2;i=247")
+val3 = client.get_node("ns=2;i=248")
+val4 = client.get_node("ns=2;i=249")
+val5 = client.get_node("ns=2;i=250")
+val6 = client.get_node("ns=2;i=251")
+val7 = client.get_node("ns=2;i=252")
+val8 = client.get_node("ns=2;i=253")
+val9 = client.get_node("ns=2;i=254")
 
 
 # Define a function for the thread
@@ -138,33 +138,33 @@ def serverTwo():
 
 					value = int(b)
 					check = int(a)
-					if check == 245:
+					if check == 246:
 						val1.set_value(value, ua.VariantType.Int16)
-						print('Value 245 set to:',value)
-					elif check == 246:
-						val2.set_value(value, ua.VariantType.Int16)
 						print('Value 246 set to:',value)
 					elif check == 247:
-						val3.set_value(value, ua.VariantType.Float)
+						val2.set_value(value, ua.VariantType.Int16)
 						print('Value 247 set to:',value)
 					elif check == 248:
-						val4.set_value(value, ua.VariantType.Float)
+						val3.set_value(value, ua.VariantType.Float)
 						print('Value 248 set to:',value)
 					elif check == 249:
-						val5.set_value(value, ua.VariantType.Float)
+						val4.set_value(value, ua.VariantType.Float)
 						print('Value 249 set to:',value)
 					elif check == 250:
-						val6.set_value(value, ua.VariantType.Float)
+						val5.set_value(value, ua.VariantType.Float)
 						print('Value 250 set to:',value)
 					elif check == 251:
-						val7.set_value(value, ua.VariantType.Int16)
+						val6.set_value(value, ua.VariantType.Float)
 						print('Value 251 set to:',value)
 					elif check == 252:
-						val8.set_value(value, ua.VariantType.Float)
+						val7.set_value(value, ua.VariantType.Int16)
 						print('Value 252 set to:',value)
 					elif check == 253:
-						val9.set_value(value, ua.VariantType.Float)
+						val8.set_value(value, ua.VariantType.Float)
 						print('Value 253 set to:',value)
+					elif check == 254:
+						val9.set_value(value, ua.VariantType.Float)
+						print('Value 254 set to:',value)
 					else:
 							print(".")
 
@@ -191,33 +191,33 @@ def serverTwoCC():
 
 					value = int(b)
 					check = int(a)
-					if check == 245:
+					if check == 246:
 						val1.set_value(value, ua.VariantType.Int16)
-						print('Value 245 set to:',value)
-					elif check == 246:
-						val2.set_value(value, ua.VariantType.Int16)
 						print('Value 246 set to:',value)
 					elif check == 247:
-						val3.set_value(value, ua.VariantType.Float)
+						val2.set_value(value, ua.VariantType.Int16)
 						print('Value 247 set to:',value)
 					elif check == 248:
-						val4.set_value(value, ua.VariantType.Float)
+						val3.set_value(value, ua.VariantType.Float)
 						print('Value 248 set to:',value)
 					elif check == 249:
-						val5.set_value(value, ua.VariantType.Float)
+						val4.set_value(value, ua.VariantType.Float)
 						print('Value 249 set to:',value)
 					elif check == 250:
-						val6.set_value(value, ua.VariantType.Float)
+						val5.set_value(value, ua.VariantType.Float)
 						print('Value 250 set to:',value)
 					elif check == 251:
-						val7.set_value(value, ua.VariantType.Int16)
+						val6.set_value(value, ua.VariantType.Float)
 						print('Value 251 set to:',value)
 					elif check == 252:
-						val8.set_value(value, ua.VariantType.Float)
+						val7.set_value(value, ua.VariantType.Int16)
 						print('Value 252 set to:',value)
 					elif check == 253:
-						val9.set_value(value, ua.VariantType.Float)
+						val8.set_value(value, ua.VariantType.Float)
 						print('Value 253 set to:',value)
+					elif check == 254:
+						val9.set_value(value, ua.VariantType.Float)
+						print('Value 254 set to:',value)
 					else:
 							print(".")
 
