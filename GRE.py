@@ -8,7 +8,7 @@ from mininet.log import setLogLevel, info
 
 def emptyNet():
 
-    NODE2_IP='131.180.165.15'
+    NODE2_IP='131.180.165.16'
     CONTROLLER_IP='127.0.0.1'
 
     net = Mininet( topo=None,
