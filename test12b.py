@@ -21,7 +21,7 @@ class LinuxRouter( Node ):
 
 def emptyNet():
 
-    NODE2_IP='192.168.56.1'
+    NODE2_IP='131.180.165.16'
     CONTROLLER_IP='127.0.0.1'
 
     net = Mininet( topo=None,
