@@ -52,7 +52,9 @@ def emptyNet():
 
     #Add Host on Substation
     s01m1 = net.addHost('s01m1', ip='100.1.0.11')
+    s01cpc = net.addHost('s01cpc', ip='100.1.0.21')
     s02m1 = net.addHost('s02m1', ip='100.2.0.11')
+    s02cpc = net.addHost('s02cpc', ip='100.2.0.21')
 
 
 
@@ -76,6 +78,8 @@ def emptyNet():
     net.addLink(s01m1,s13, intfName1='s01m1-eth1', params1={'ip':'100.1.0.11/24'})
     net.addLink(s02m1,s23, intfName1='s02m1-eth1', params1={'ip':'100.2.0.11/24'})
 
+    net.addLink(s01cpc,s12)
+    net.addLink(s02cpc,s22)
 
     #Build and start Network ============================================================================
     net.build()
@@ -95,6 +99,9 @@ def emptyNet():
 
     s01m1.cmdPrint('ip route add 150.0.0.0/8 via 100.1.0.1 dev s01m1-eth1')
     s02m1.cmdPrint('ip route add 150.0.0.0/8 via 100.2.0.1 dev s02m1-eth1')
+
+    s01cpc.cmdPrint('ip route add 150.0.0.0/8 via 100.1.0.1 dev s01cpc-eth0')
+    s02cpc.cmdPrint('ip route add 150.0.0.0/8 via 100.2.0.1 dev s02cpc-eth0')
 
 
     CLI( net )
