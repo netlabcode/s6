@@ -2,7 +2,7 @@
 import psycopg2
 
 try:
-	conn = psycopg2.connect("host='131.180.165.5' dbname='postgres' user='postgres' password='----'")
+	conn = psycopg2.connect("host='131.180.165.5:5432' dbname='postgres' user='postgres' password='crpg'")
 	print("Connection established")
 except:
 	print("Connection Fail")
