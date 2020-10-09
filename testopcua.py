@@ -28,7 +28,7 @@ value = 2
 while a < 6:
 	#Update OPC value
 	print("123")
-	"""
+	
 	value1 = val1.get_value()
 	value2 = val2.get_value()
 	value3 = val3.get_value()
@@ -36,8 +36,8 @@ while a < 6:
 	value5 = val5.get_value()
 	value6 = val6.get_value()
 
-	print(value1,value2,value3,value4,value5,value6)
-	"""
+	print(value1)
+	
 	time.sleep(1)
 	
 
