@@ -11,7 +11,7 @@ HOST = ''
 
 
 #OPC ACCESS
-url = "opc.tcp://10.1.0.99:8899/freeopcua/server/"
+url = "opc.tcp://131.180.165.5:8899/freeopcua/server/"
 client = Client(url)
 client.connect()
 print("connected to OPC UA Server")
