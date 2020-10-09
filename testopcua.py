@@ -37,7 +37,7 @@ while a < 6:
 	value6 = val6.get_value()
 
 	print(value1,value2,value3,value4,value5,value6)
-
-	time.sleep(1)
 	"""
+	time.sleep(1)
+	
 
