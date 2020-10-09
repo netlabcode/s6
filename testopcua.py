@@ -36,5 +36,5 @@ while a < 6:
 
 	print(value1,value2,value3,value4,value5,value6)
 
-	time.sleep(500)
+	time.sleep(1)
 
