@@ -1,7 +1,7 @@
 import psycopg2
 from datetime import datetime
  
-conn = psycopg2.connect(host="131.180.165.7",database="crof_db",user="postgres", password="crpg")
+conn = psycopg2.connect(host="131.180.165.7",database="CRoF",user="postgres", password="crpg")
 
 #Check Connection
 if conn is not None:
