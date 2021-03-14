@@ -9,6 +9,20 @@ if conn is not None:
 else:
     print('Connection not established to PostgreSQL.')
 
+
+cursor = conn.cursor()
+cursor.execute('''SELECT * from Objects''')
+result = cursor.fetchone();
+print(result)
+
+#Select Data
+"""
+x = 1
+while x < 6:
+"""
+
+
+
 """
 #Setting auto commit 
 conn.autocommit = True
