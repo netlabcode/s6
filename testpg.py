@@ -1,5 +1,6 @@
 import psycopg2
 from datetime import datetime
+import time
  
 conn = psycopg2.connect(host="131.180.165.7",database="CRoF",user="postgres", password="crpg")
 
@@ -16,10 +17,17 @@ result = cursor.fetchone();
 print(result[0])
 
 #Select Data
-"""
+
+record1 = result[0]
 x = 1
 while x < 6:
-"""
+	cursor.execute('''SELECT value from objects WHERE id=1''')
+	result = cursor.fetchone();
+	if record1 != result[0]:
+		print(result[0])
+		record1 = result[0]
+	time.sleep(1)
+
 
 
 
