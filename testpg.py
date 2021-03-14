@@ -4,12 +4,11 @@ from datetime import datetime
 conn = psycopg2.connect(host="131.180.165.5",database="crpg", user="postgres", password="crpg")
 
 #Check Connection
-"""
 if conn is not None:
     print('Connection established to PostgreSQL.')
 else:
     print('Connection not established to PostgreSQL.')
-"""
+
 """
 #Setting auto commit 
 conn.autocommit = True
