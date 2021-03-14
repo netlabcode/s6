@@ -11,7 +11,7 @@ else:
 
 
 cursor = conn.cursor()
-cursor.execute('''SELECT * from Objects''')
+cursor.execute('''SELECT * from objects''')
 result = cursor.fetchone();
 print(result)
 
