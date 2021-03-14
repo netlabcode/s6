@@ -11,8 +11,7 @@ else:
 
 
 cursor = conn.cursor()
-cursor.execute('''SELECT params from objects WHERE id=1''')
-result = cursor.fetchone();
+result = cursor.execute('''SELECT value from objects WHERE id=1''')
 print(result)
 
 #Select Data
