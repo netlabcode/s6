@@ -13,7 +13,7 @@ else:
 cursor = conn.cursor()
 cursor.execute('''SELECT value from objects WHERE id=1''')
 result = cursor.fetchone();
-print(result)
+print(cursor.execute('''SELECT value from objects WHERE id=1'''))
 
 #Select Data
 """
