@@ -1,15 +1,15 @@
 import psycopg2
 from datetime import datetime
  
-conn = psycopg2.connect(host="131.180.165.7", database="CRoF", user="postgres", password="crpg")
+conn = psycopg2.connect(host="131.180.165.5",database="crpg", user="postgres", password="crpg")
 
 #Check Connection
-
+"""
 if conn is not None:
     print('Connection established to PostgreSQL.')
 else:
     print('Connection not established to PostgreSQL.')
-
+"""
 """
 #Setting auto commit 
 conn.autocommit = True
@@ -34,6 +34,7 @@ inserted_values = (
 cursor.execute('''INSERT INTO test(val, dec, dtime) VALUES (33, -999.123456, dt)''')
 """
 
-
-#cursor.close()
+"""
+cursor.close()
+"""
 conn.close()
