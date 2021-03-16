@@ -31,7 +31,7 @@ while x < 6:
 
 
 
-"""
+
 #Setting auto commit 
 conn.autocommit = True
 
@@ -41,14 +41,12 @@ cursor = conn.cursor()
 dt = datetime.now()
 
 inserted_values = (
-        dt,
-        123456.123456789123456,
-        123
+        dt
     )
-"""
+
 
 # INSTER VALUE TO TABLE ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-#cursor.execute(" INSERT INTO test(dtime, dec, val) VALUES (%s,%s,%s)", inserted_values)
+cursor.execute(" INSERT INTO s17m1(dtime) VALUES (%s)", inserted_values)
 
 """
 # Preparing SQL queries to INSERT a record into the database.
