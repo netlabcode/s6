@@ -11,6 +11,9 @@ else:
     print('Connection not established to PostgreSQL.')
 
 
+#Setting auto commit 
+conn.autocommit = True
+
 cursor = conn.cursor()
 cursor.execute('''SELECT value from objects WHERE id=1''')
 result = cursor.fetchone();
@@ -32,8 +35,7 @@ while x < 6:
 
 
 
-#Setting auto commit 
-conn.autocommit = True
+
 
 #Creating a cursor object using the cursor() method
 cursor = conn.cursor()
