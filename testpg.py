@@ -59,7 +59,7 @@ inserted_values = (
         		b
     		)
 
-cursor.execute(" INSERT INTO s07m10(v_ctrl, v_res) VALUES (%s,%s)", inserted_values)
+cursor.execute(" INSERT INTO s17m1(v_ctrl, v_res) VALUES (%s,%s)", inserted_values)
 
 
 
