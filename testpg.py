@@ -17,7 +17,7 @@ result = cursor.fetchone();
 print(result[0])
 
 #Select Data
-
+"""
 record1 = result[0]
 x = 1
 while x < 6:
@@ -27,7 +27,7 @@ while x < 6:
 		print(result[0])
 		record1 = result[0]
 	time.sleep(1)
-
+"""
 
 
 
