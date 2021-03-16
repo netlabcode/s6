@@ -48,7 +48,7 @@ inserted_values = (
 
 
 # INSTER VALUE TO TABLE ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-cursor.execute(" INSERT INTO s17m1(dtime) VALUES (%s)", inserted_values)
+cursor.execute(" INSERT INTO s17m1(dtime) VALUES (%s)", dt)
 
 """
 # Preparing SQL queries to INSERT a record into the database.
