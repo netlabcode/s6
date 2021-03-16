@@ -50,6 +50,19 @@ inserted_values = (
 # INSTER VALUE TO TABLE ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 cursor.execute('''INSERT INTO s17m1(cb_ctrl) VALUES (3)''')
 
+
+a=2
+b=3
+
+inserted_values = (
+        		a,
+        		b
+    		)
+
+cursor.execute(" INSERT INTO s07m10(v_ctrl, v_res) VALUES (%s,%s)", inserted_values)
+
+
+
 """
 # Preparing SQL queries to INSERT a record into the database.
 cursor.execute('''INSERT INTO test(val, dec, dtime) VALUES (33, -999.123456, dt)''')
