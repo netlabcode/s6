@@ -1674,8 +1674,9 @@ S3_M3_B25_Tr_lv_Q_res =S03.add_variable(addspace,"S3_M3_B25_Tr_lv_Q_res",variant
 S3_M3_B25_Tr_lv_Q_res.set_writable(True)
 S3_M3_B25_Tr_lv_P_res =S03.add_variable(addspace,"S3_M3_B25_Tr_lv_P_res",variant2)
 S3_M3_B25_Tr_lv_P_res.set_writable(True)
-S3_M3_B25_Tr_hv_Q_res =S03.add_variable(addspace,"S3_M3_B25_Tr_hv_Q_res",variant2)
-S3_M3_B25_Tr_hv_Q_res.set_writable(True)
+S2_M4_B02_Tr_hv_Q_res =S02.add_variable(addspace,"S2_M4_B02_Tr_hv_Q_res",variant2)
+S2_M4_B02_Tr_hv_Q_res.set_writable(True)
+
 
 MODE =XPF.add_variable(addspace,"MODE",variant)
 MODE.set_writable(True)
