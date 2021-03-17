@@ -1654,10 +1654,13 @@ S27_M3_B14_Li_04_14_Q_res.set_writable(True)
 S27_M3_B14_Li_04_14_V_res =S27.add_variable(addspace,"S27_M3_B14_Li_04_14_V_res",variant2)
 S27_M3_B14_Li_04_14_V_res.set_writable(True)
 
+#new ------------------------------------
+
 S07_M4_B19_Tr_19_33_CB_ctrl =S07.add_variable(addspace,"S07_M4_B19_Tr_19_33_CB_ctrl",variant)
 S07_M4_B19_Tr_19_33_CB_ctrl.set_writable(True)
 S07_M4_B19_Tr_33_19_CB_ctrl =S07.add_variable(addspace,"S07_M4_B19_Tr_33_19_CB_ctrl",variant)
 S07_M4_B19_Tr_33_19_CB_ctrl.set_writable(True)
+
 S1_M3_B39_Ld39_I_res =S01.add_variable(addspace,"S1_M3_B39_Ld39_I_res",variant2)
 S1_M3_B39_Ld39_I_res.set_writable(True)
 S3_M2_B25_Ld25_I_res =S03.add_variable(addspace,"S3_M2_B25_Ld25_I_res",variant2)
@@ -1668,14 +1671,18 @@ S16_M4_B3_Ld3_I_res =S16.add_variable(addspace,"S16_M4_B3_Ld3_I_res",variant2)
 S16_M4_B3_Ld3_I_res.set_writable(True)
 S15_M4_B4_Ld4_I_res =S15.add_variable(addspace,"S15_M4_B4_Ld4_I_res",variant2)
 S15_M4_B4_Ld4_I_res.set_writable(True)
+
 S2_M4_B02_Tr_hv_P_res =S02.add_variable(addspace,"S2_M4_B02_Tr_hv_P_res",variant2)
 S2_M4_B02_Tr_hv_P_res.set_writable(True)
-S3_M3_B25_Tr_lv_Q_res =S03.add_variable(addspace,"S3_M3_B25_Tr_lv_Q_res",variant2)
-S3_M3_B25_Tr_lv_Q_res.set_writable(True)
-S3_M3_B25_Tr_lv_P_res =S03.add_variable(addspace,"S3_M3_B25_Tr_lv_P_res",variant2)
-S3_M3_B25_Tr_lv_P_res.set_writable(True)
+S2_M3_B25_Tr_lv_Q_res =S02.add_variable(addspace,"S2_M3_B25_Tr_lv_Q_res",variant2)
+S2_M3_B25_Tr_lv_Q_res.set_writable(True)
+S2_M3_B25_Tr_lv_P_res =S02.add_variable(addspace,"S2_M3_B25_Tr_lv_P_res",variant2)
+S2_M3_B25_Tr_lv_P_res.set_writable(True)
 S2_M4_B02_Tr_hv_Q_res =S02.add_variable(addspace,"S2_M4_B02_Tr_hv_Q_res",variant2)
 S2_M4_B02_Tr_hv_Q_res.set_writable(True)
+
+S07_M4_B19_Tr_33_19_CB_res =S07.add_variable(addspace,"S07_M4_B19_Tr_33_19_CB_res",variant)
+S07_M4_B19_Tr_33_19_CB_res.set_writable(True)
 
 
 MODE =XPF.add_variable(addspace,"MODE",variant)
