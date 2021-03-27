@@ -275,15 +275,15 @@ def emptyNet():
     info( net[ 's24m5' ].cmd( 'ip route add 100.0.0.0/24 via 100.24.0.1 dev s24m5-eth1' ) )
     info( net[ 's24m6' ].cmd( 'ip route add 100.0.0.0/24 via 100.24.0.1 dev s24m6-eth1' ) )
     
-    info( net[ 'ccdb' ].cmd( 'ip route add 100.1.0.0/24 via 100.0.0.1 dev ccdb-eth1' ) )
-    info( net[ 'ccdb' ].cmd( 'ip route add 100.2.0.0/24 via 100.0.0.1 dev ccdb-eth1' ) )
-    info( net[ 'ccdb' ].cmd( 'ip route add 100.12.0.0/24 via 100.0.0.1 dev ccdb-eth1' ) )
-    info( net[ 'ccdb' ].cmd( 'ip route add 100.20.0.0/24 via 100.0.0.1 dev ccdb-eth1' ) )
+    info( net[ 'ccdb' ].cmd( 'ip route add 100.5.0.0/24 via 100.0.0.1 dev ccdb-eth1' ) )
+    info( net[ 'ccdb' ].cmd( 'ip route add 100.16.0.0/24 via 100.0.0.1 dev ccdb-eth1' ) )
+    info( net[ 'ccdb' ].cmd( 'ip route add 100.19.0.0/24 via 100.0.0.1 dev ccdb-eth1' ) )
+    info( net[ 'ccdb' ].cmd( 'ip route add 100.24.0.0/24 via 100.0.0.1 dev ccdb-eth1' ) )
 
-    info( net[ 'cctl' ].cmd( 'ip route add 100.1.0.0/24 via 100.0.0.1 dev cctl-eth1' ) )
-    info( net[ 'cctl' ].cmd( 'ip route add 100.2.0.0/24 via 100.0.0.1 dev cctl-eth1' ) )
-    info( net[ 'cctl' ].cmd( 'ip route add 100.12.0.0/24 via 100.0.0.1 dev cctl-eth1' ) )
-    info( net[ 'cctl' ].cmd( 'ip route add 100.20.0.0/24 via 100.0.0.1 dev cctl-eth1' ) )
+    info( net[ 'cctl' ].cmd( 'ip route add 100.5.0.0/24 via 100.0.0.1 dev cctl-eth1' ) )
+    info( net[ 'cctl' ].cmd( 'ip route add 100.16.0.0/24 via 100.0.0.1 dev cctl-eth1' ) )
+    info( net[ 'cctl' ].cmd( 'ip route add 100.19.0.0/24 via 100.0.0.1 dev cctl-eth1' ) )
+    info( net[ 'cctl' ].cmd( 'ip route add 100.24.0.0/24 via 100.0.0.1 dev cctl-eth1' ) )
     
     info(os.system('ip addr add 100.0.0.99/24 dev s999'))
     info(os.system('ip link set s999 up'))
