@@ -1713,6 +1713,6 @@ while True:
     try:
         server.start()
         print("Server start at {}".format(url))
-    except:
-        pass
+    except KeyboardInterrupt:
+        print("exit")
     
