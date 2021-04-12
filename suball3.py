@@ -4,6 +4,7 @@ from opcua import Client
 from random import randint
 import datetime
 import time
+import _thread
 
 server = Server()
 url = "opc.tcp://0.0.0.0:8899/freeopcua/server/"
@@ -1708,11 +1709,13 @@ GEN_PSUM_RES =XPF.add_variable(addspace,"GEN_PSUM_RES",variant2)
 GEN_PSUM_RES.set_writable(True)
 
 
+def startServer():
+    server.start()
+    print("Server start at {}".format(url))
 
 while True:
     try:
-        server.start()
-        print("Server start at {}".format(url))
-    except KeyboardInterrupt:
-        print("exit")
+        _thread.start_new_thread(startServer, ())
+    except:
+        print("restarting server")
     
