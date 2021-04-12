@@ -1714,9 +1714,5 @@ while True:
         server.start()
         print("Server start at {}".format(url))
     except:
-        print("Server Fail and restarting")
-        try:
-            server.stop()
-        except:
-            pass
+        pass
     
