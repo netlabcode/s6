@@ -1714,11 +1714,11 @@ def startServer():
     server.start()
     print("Server start at {}".format(url))
 
-label .begin
+label: begin
 
 try:
     startServer()
 except Exception as e:
     print(e)
-    goto .begin
+    goto begin
     
