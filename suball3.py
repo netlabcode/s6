@@ -1712,14 +1712,12 @@ def startServer():
     server.start()
     print("Server start at {}".format(url))
 
-while True:
-    try:
-        startServer()
-    except Exception as e:
-        print(e)
-        server.stop()
-        time.sleep(1)
-        print("restarting . . .")
+try:
+    startServer()
+except Exception as e:
+    print(e)
+    server.stop()
+    print("restarting . . .")
 
 
 
