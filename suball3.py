@@ -1713,9 +1713,8 @@ def startServer():
     server.start()
     print("Server start at {}".format(url))
 
-while True:
-    try:
-        _thread.start_new_thread(startServer, ())
-    except:
-        print("restarting server")
+try:
+    _thread.start_new_thread(startServer, ())
+except Exception as e:
+    print(e)
     
