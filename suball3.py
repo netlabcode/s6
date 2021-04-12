@@ -1700,8 +1700,6 @@ S2_M4_B02_Tr_hv_Q_res.set_writable(True)
 #839
 
 
-
-
 MODE =XPF.add_variable(addspace,"MODE",variant)
 MODE.set_writable(True)
 READY =XPF.add_variable(addspace,"READY",variant)
@@ -1714,11 +1712,9 @@ def startServer():
     server.start()
     print("Server start at {}".format(url))
 
-label: begin
-
 try:
     startServer()
 except Exception as e:
     print(e)
-    goto begin
+    startServer()
     
