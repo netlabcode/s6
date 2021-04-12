@@ -1714,7 +1714,7 @@ def startServer():
     print("Server start at {}".format(url))
 
 try:
-    _thread.start_new_thread(startServer, ())
+    startServer()
 except Exception as e:
     print(e)
     
