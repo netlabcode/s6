@@ -5,6 +5,7 @@ from random import randint
 import datetime
 import time
 import _thread
+from goto import with_goto
 
 server = Server()
 url = "opc.tcp://0.0.0.0:8899/freeopcua/server/"
@@ -1713,8 +1714,11 @@ def startServer():
     server.start()
     print("Server start at {}".format(url))
 
+label .backone
+
 try:
     startServer()
 except Exception as e:
     print(e)
+    goto .backone
     
