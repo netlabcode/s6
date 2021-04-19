@@ -52,9 +52,34 @@ cursor.execute('''SELECT code from objects WHERE id=6''')
 result = cursor.fetchone()
 r6 = result[0]
 
+"""
+s1 = socket.socket()
+host = socket.gethostname()
+
+def server():
+    s1.bind(('',PORT1))
+    s1.listen()
+    conn1, addr = s1.accept()
+    while True:
+        print('Server 1 from:',addr)
+        #Format: mu01_id+value
+        cursor.execute('''SELECT value from objects WHERE id=1''')
+        result = cursor.fetchone()
+        if record1 != result[0]:
+            print(result[0])
+            string = "mu01_"+str(r1)+"+"+str(result[0])
+            datax = string.encode()
+            conn1.sendall(datax)
+            print(string)
+            record1 = result[0]
+    s1.close()
+    server()
+
+server()
+"""
 
 
-try:                   
+def serverX():                   
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s1:
         s1.bind(('',PORT1))
         s1.listen()
@@ -64,6 +89,7 @@ try:
             while True:
                 a = 1
                 while a < 6:
+
                     #Format: mu01_id+value
                     cursor.execute('''SELECT value from objects WHERE id=1''')
                     result = cursor.fetchone()
@@ -124,11 +150,14 @@ try:
                         conn1.sendall(datax)
                         print(string)
                         record6 = result[0]
+            s1.close()
 
+            serverX()
+try:
+    serverX()
 except:
    print ("Error: unable to start thread")
    conn.close()
-
 
 
 while 1:
