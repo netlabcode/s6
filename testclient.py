@@ -22,7 +22,7 @@ client.connect()
 print("connected to OPC UA Server")
 #val1 = client.get_node("ns=3;i=1008")
 #val2 = client.get_node("ns=3;i=1009")
-val1 = client.get_node("ns=3;s=PF.v_res")
+val1 = client.get_node("ns=2;s=PF.v_res")
 val2 = client.get_node("ns=2;s=PF.cb_ctrl")
 
 
