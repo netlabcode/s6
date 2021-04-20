@@ -8,50 +8,7 @@ import socket
 PORT1 = 8801
  
 
-conn = psycopg2.connect(host="131.180.165.7",database="CRoF",user="postgres", password="crpg")
 
-
-cursor = conn.cursor()
-
-#Value id 1-7
-cursor.execute('''SELECT value from objects WHERE id=1''')
-result = cursor.fetchone()
-record1 = result[0]
-cursor.execute('''SELECT value from objects WHERE id=2''')
-result = cursor.fetchone()
-record2 = result[0]
-cursor.execute('''SELECT value from objects WHERE id=3''')
-result = cursor.fetchone()
-record3 = result[0]
-cursor.execute('''SELECT value from objects WHERE id=4''')
-result = cursor.fetchone()
-record4 = result[0]
-cursor.execute('''SELECT value from objects WHERE id=5''')
-result = cursor.fetchone()
-record5 = result[0]
-cursor.execute('''SELECT value from objects WHERE id=6''')
-result = cursor.fetchone()
-record6 = result[0]
-
-#Value code
-cursor.execute('''SELECT code from objects WHERE id=1''')
-result = cursor.fetchone()
-r1 = result[0]
-cursor.execute('''SELECT code from objects WHERE id=2''')
-result = cursor.fetchone()
-r2 = result[0]
-cursor.execute('''SELECT code from objects WHERE id=3''')
-result = cursor.fetchone()
-r3 = result[0]
-cursor.execute('''SELECT code from objects WHERE id=4''')
-result = cursor.fetchone()
-r4 = result[0]
-cursor.execute('''SELECT code from objects WHERE id=5''')
-result = cursor.fetchone()
-r5 = result[0]
-cursor.execute('''SELECT code from objects WHERE id=6''')
-result = cursor.fetchone()
-r6 = result[0]
 
 
 """
@@ -91,6 +48,51 @@ def serverX():
                     datax = data.encode()
                     try:
 
+                        conn = psycopg2.connect(host="131.180.165.7",database="CRoF",user="postgres", password="crpg")
+
+
+                        cursor = conn.cursor()
+
+                        #Value id 1-7
+                        cursor.execute('''SELECT value from objects WHERE id=1''')
+                        result = cursor.fetchone()
+                        record1 = result[0]
+                        cursor.execute('''SELECT value from objects WHERE id=2''')
+                        result = cursor.fetchone()
+                        record2 = result[0]
+                        cursor.execute('''SELECT value from objects WHERE id=3''')
+                        result = cursor.fetchone()
+                        record3 = result[0]
+                        cursor.execute('''SELECT value from objects WHERE id=4''')
+                        result = cursor.fetchone()
+                        record4 = result[0]
+                        cursor.execute('''SELECT value from objects WHERE id=5''')
+                        result = cursor.fetchone()
+                        record5 = result[0]
+                        cursor.execute('''SELECT value from objects WHERE id=6''')
+                        result = cursor.fetchone()
+                        record6 = result[0]
+
+                        #Value code
+                        cursor.execute('''SELECT code from objects WHERE id=1''')
+                        result = cursor.fetchone()
+                        r1 = result[0]
+                        cursor.execute('''SELECT code from objects WHERE id=2''')
+                        result = cursor.fetchone()
+                        r2 = result[0]
+                        cursor.execute('''SELECT code from objects WHERE id=3''')
+                        result = cursor.fetchone()
+                        r3 = result[0]
+                        cursor.execute('''SELECT code from objects WHERE id=4''')
+                        result = cursor.fetchone()
+                        r4 = result[0]
+                        cursor.execute('''SELECT code from objects WHERE id=5''')
+                        result = cursor.fetchone()
+                        r5 = result[0]
+                        cursor.execute('''SELECT code from objects WHERE id=6''')
+                        result = cursor.fetchone()
+                        r6 = result[0]
+
                         """
                         cursor.execute('''SELECT value from objects WHERE id=1''')
                         result = cursor.fetchone()
@@ -105,7 +107,9 @@ def serverX():
 
                         conn1.sendall(datax)
                         print(datax)
+                        conn.close()
                         time.sleep(1)
+                        
                     except:
                         conn1.close()
                         print("Connection Close")
