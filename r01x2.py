@@ -53,7 +53,7 @@ def serverX():
                         
                         cursor = conn.cursor()
                         
-                        """
+
                         #Value id 1-7
                         cursor.execute('''SELECT value from objects WHERE id=1''')
                         result = cursor.fetchone()
@@ -93,7 +93,7 @@ def serverX():
                         cursor.execute('''SELECT code from objects WHERE id=6''')
                         result = cursor.fetchone()
                         r6 = result[0]
-                        """
+
 
                         """
                         cursor.execute('''SELECT value from objects WHERE id=1''')
@@ -108,7 +108,7 @@ def serverX():
                         """
 
                         conn1.sendall(datax)
-                        print(datax)
+                        print(r1)
                         conn.close()
                         time.sleep(1)
                         
