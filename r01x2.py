@@ -91,19 +91,10 @@ def serverX():
                 while True:
                     data = "a"
                     datax = data.encode()
-                    print("v")
                     try:
-                        print("x")
-
                         
                         cursor.execute('''SELECT value from objects WHERE id=1''')
-                        print(9)
                         result = cursor.fetchone()
-                        print(10)
-                        print(result)
-                        print(11)
-
-                        """
                         if record1 != result[0]:
                             print(result[0])
                             string = "mu01_"+str(r1)+"+"+str(result[0])
@@ -112,8 +103,6 @@ def serverX():
                             print(string)
                             record1 = result[0]
                             time.sleep(1)
-                        """
-
 
 
                         conn1.sendall(datax)
