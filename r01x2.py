@@ -93,9 +93,12 @@ def serverX():
                     datax = data.encode()
                     try:
                         print("x")
-                        
+
                         cursor.execute('''SELECT value from objects WHERE id=1''')
                         result = cursor.fetchone()
+                        print(result[0])
+
+                        """
                         if record1 != result[0]:
                             print(result[0])
                             string = "mu01_"+str(r1)+"+"+str(result[0])
@@ -104,6 +107,7 @@ def serverX():
                             print(string)
                             record1 = result[0]
                             time.sleep(1)
+                        """
 
 
 
