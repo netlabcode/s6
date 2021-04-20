@@ -7,6 +7,7 @@ import socket
 
 PORT1 = 8801
  
+"""
 conn = psycopg2.connect(host="131.180.165.7",database="CRoF",user="postgres", password="crpg")
 
 
@@ -51,6 +52,7 @@ r5 = result[0]
 cursor.execute('''SELECT code from objects WHERE id=6''')
 result = cursor.fetchone()
 r6 = result[0]
+"""
 
 """
 s1 = socket.socket()
@@ -77,8 +79,36 @@ def server():
 
 server()
 """
+def serverX():
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s1:
+            s1.bind(('',PORT1))
+            s1.listen()
+            conn1, addr = s1.accept()
+            with conn1:
+                print('Server 1 from:',addr)
+                while True:
+                    data = "a"
+                    datax = data.encode()
+                    try:
+                        conn1.sendall(datax)
+                        print(datax)
+                        time.sleep(1)
+                    except:
+                        conn1.close()
+                        print("Connection Close")
+                        break
+                
+                conn1.close()
+                print("Restart Server")
+                s1.close()
+                time.sleep(1)
+                serverX()
+
+serverX()
+            
 
 
+"""
 def serverX():                   
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s1:
         s1.bind(('',PORT1))
@@ -86,7 +116,13 @@ def serverX():
         conn1, addr = s1.accept()
         with conn1:
             print('Server 1 from:',addr)
+
             while True:
+                #Format: mu01_id+value
+                cursor.execute('''SELECT value from objects WHERE id=1''')
+                result = cursor.fetchone()
+                if record1 != result[0]:
+                    print("a")
                 a = 1
                 while a < 6:
 
@@ -162,4 +198,5 @@ except:
 
 while 1:
    pass
+"""
 
