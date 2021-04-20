@@ -93,9 +93,6 @@ def serverX():
                     datax = data.encode()
                     try:
                         
-
-
-                        """
                         cursor.execute('''SELECT value from objects WHERE id=1''')
                         result = cursor.fetchone()
                         if record1 != result[0]:
@@ -105,10 +102,10 @@ def serverX():
                             conn1.sendall(datax)
                             print(string)
                             record1 = result[0]
-                        """
+
 
                         conn1.sendall(datax)
-                        print(r1)
+                        print(record1)
                         conn.close()
                         time.sleep(1)
                         
