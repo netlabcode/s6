@@ -105,7 +105,7 @@ def serverX():
                             time.sleep(1)
 
 
-                        #conn1.sendall(datax)
+                        conn1.sendall(datax)
                         print(record1)
                         time.sleep(1)
                         
