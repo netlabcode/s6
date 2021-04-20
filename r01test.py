@@ -17,22 +17,27 @@ PORTS2 = 8801
 
 # Define a function for the thread
 def serverOne():
-
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sr:
         sr.connect((RHOST, PORTS2))
 
         while True:
-            data2 = sr.recv(1024)
-            data2new = data2.decode("utf-8")
-            print(data2new)
+           try:
+               data2 = sr.recv(1024)
+               data2new = data2.decode("utf-8")
+               print(data2new)
+           except:
+              print("Close connection")
+              sr.close()
+              print("Restarting . . . ")
+              serverOne()
         
 							
 # Create two threads as follows
 try:
-   _thread.start_new_thread( serverOne, ( ) )
+   serverOne()
 
 except:
-   print ("Error: unable to start thread")
+   print ("Error: unable to start server")
 
 while 1:
    pass
