@@ -47,7 +47,7 @@ def serverX():
                     data = "a"
                     datax = data.encode()
                     try:
-
+                        """
                         conn = psycopg2.connect(host="131.180.165.7",database="CRoF",user="postgres", password="crpg")
 
 
@@ -92,6 +92,7 @@ def serverX():
                         cursor.execute('''SELECT code from objects WHERE id=6''')
                         result = cursor.fetchone()
                         r6 = result[0]
+                        """
 
                         """
                         cursor.execute('''SELECT value from objects WHERE id=1''')
@@ -107,7 +108,7 @@ def serverX():
 
                         conn1.sendall(datax)
                         print(datax)
-                        conn.close()
+                        #conn.close()
                         time.sleep(1)
                         
                     except:
