@@ -50,9 +50,10 @@ def serverX():
                         
                         conn = psycopg2.connect(host="131.180.165.7",database="CRoF",user="postgres", password="crpg")
 
-                        """
+                        
                         cursor = conn.cursor()
-
+                        
+                        """
                         #Value id 1-7
                         cursor.execute('''SELECT value from objects WHERE id=1''')
                         result = cursor.fetchone()
