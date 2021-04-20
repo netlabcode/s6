@@ -24,9 +24,8 @@ def serverOne():
         while True:
             data2 = sr.recv(1024)
             data2new = data2.decode("utf-8")
-            print(data2)
             print(data2new)
-
+        
 							
 # Create two threads as follows
 try:
