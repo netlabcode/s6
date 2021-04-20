@@ -25,9 +25,11 @@ def serverOne():
                data2 = sr.recv(1024)
                data2new = data2.decode("utf-8")
                print(data2new)
+               time.sleep(1)
            except:
               print("Close connection")
               sr.close()
+              time.sleep(2)
               print("Restarting . . . ")
               serverOne()
         

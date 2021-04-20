@@ -123,6 +123,10 @@ def serverX():
                             conn1.sendall(datax)
                             print(string)
                             record6 = result[0]
+                        
+                        print(1)
+                        time.sleep(1)
+                        
                     except:
                         conn1.close()
                         print("Connection Close")
