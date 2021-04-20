@@ -118,7 +118,6 @@ def serverX():
 
                         conn1.sendall(datax)
                         print(record1)
-                        conn.close()
                         time.sleep(1)
                         
                     except:
