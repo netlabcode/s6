@@ -57,6 +57,7 @@ def serverX():
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s1:
         s1.bind(('',PORT1))
         s1.listen()
+        print("listening . . . ")
         conn1, addr = s1.accept()
         with conn1:
             print('Server 1 from:',addr)
@@ -123,6 +124,9 @@ def serverX():
                         print(string)
                         record6 = result[0]
                     
+                    data="a"
+                    datax = data.encode()
+                    conn1.sendall(datax)
                     print(1)
                     time.sleep(1)
                     
