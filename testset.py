@@ -15,14 +15,14 @@ PORT4 = 994
 
 
 #OPC ACCESS
-url = "opc.tcp://srv786.tudelft.net:53530/OPCUA/SimulationServer"
+url = "opc.tcp://srv785.tudelft.net:53530/OPCUA/SimulationServer"
 client = Client(url)
 client.connect()
 print("connected to OPC UA Server")
-val1 = client.get_node("ns=7;i=1008")
-val2 = client.get_node("ns=7;i=1009")
+val1 = client.get_node("ns=7;i=1")
+val2 = client.get_node("ns=7;i=2")
 
 
 value=0
-val2.set_value(value, ua.VariantType.Int16)
+val1.set_value(value, ua.VariantType.Int16)
 
