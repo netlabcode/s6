@@ -21,9 +21,9 @@ url = "opc.tcp://srv785.tudelft.net:53530/OPCUA/SimulationServer"
 client = Client(url)
 client.connect()
 print("connected to OPC UA Server")
-val1 = client.get_node("ns=3;i=1")
-val2 = client.get_node("ns=3;i=2")
-val3 = client.get_node("ns=3;i=3")
+val1 = client.get_node("ns=3;n=1")
+val2 = client.get_node("ns=3;n=2")
+val3 = client.get_node("ns=3;n=3")
 
 #val1 = client.get_node("ns=7;s=PF.v_res")
 #val2 = client.get_node("ns=7;s=PF.cb_ctrl")
