@@ -29,5 +29,5 @@ value2= 29
 value3= 2
 #val1.set_value(value, ua.VariantType.Float)
 val2.set_value(value2, ua.VariantType.Int16)
-val2.set_value(value3, ua.VariantType.Int16)
+val3.set_value(value3, ua.VariantType.Int16)
 
