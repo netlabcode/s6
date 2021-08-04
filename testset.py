@@ -22,15 +22,18 @@ print("connected to OPC UA Server")
 val1 = client.get_node("ns=7;i=70")
 val2 = client.get_node("ns=7;i=29")
 val3 = client.get_node("ns=7;i=2")
+val4 = client.get_node("ns=7;i=107")
 
 
 value=70
 value2= 29
 value3= 2
+value4 = 107
 print(value)
 val1.set_value(value, ua.VariantType.Double)
 val2.set_value(value2, ua.VariantType.Int16)
 val3.set_value(value3, ua.VariantType.Int16)
+val4.set_value(value4, ua.VariantType.Double)
 
 
 
