@@ -28,7 +28,7 @@ value=70
 value2= 29
 value3= 2
 print(value)
-val1.set_value(value, ua.VariantType.Float)
+val1.set_value(value, ua.VariantType.Int16)
 val2.set_value(value2, ua.VariantType.Int16)
 val3.set_value(value3, ua.VariantType.Int16)
 
