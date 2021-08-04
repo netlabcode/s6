@@ -19,12 +19,12 @@ url = "opc.tcp://srv785.tudelft.net:53530/OPCUA/SimulationServer"
 client = Client(url)
 client.connect()
 print("connected to OPC UA Server")
-val1 = client.get_node("ns=7;i=107")
+val1 = client.get_node("ns=7;i=70")
 val2 = client.get_node("ns=7;i=29")
 val3 = client.get_node("ns=7;i=2")
 
 
-value=107
+value=70
 value2= 29
 value3= 2
 val1.set_value(value, ua.VariantType.Float)
